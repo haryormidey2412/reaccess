@@ -1,0 +1,13 @@
+h1{
+    background: brown;
+    color: black;
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+}
+p{
+    background: goldenrod;
+    color: blanchedalmond;
+    font-size: 30px;
+    text-transform: capitalize;
+}
