@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumenAssignment Topic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        table{
+            border-collapse: collapse;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <table border="" cellpadding="7" style="border-collapse: collapse; font-size: 24px;">
+        <h1>5 ways to display Javasript</h1>
+        <tr>
+            <td>Console.log()</td>
+            <td>One of the basic methods to output data to console, it is good for debugging <br>and listing out errors while not 
+                showing them to visitors on the webpage.<br> The data you want to output is passed as a parameter in the log() 
+                method.
+            </td>
+        </tr>
+        <tr>
+            <td>Alert Method</td>
+            <td>
+                This method will display an alert box with some text inside it and an OK button placed below the text.<br>
+                Alert box is used to give any important information to the user. <br>It gets invoked after a specified 
+                event and the webpage becomes unoperational until alert box is over the webpage.
+            </td>
+        </tr>
+        <tr>
+            <td>InnerHTML</td>
+            <td>            
+                JavaScript can access any element with a defined ID by using the document.getElementById(id) method<br>
+                and then the CSS/HTML of the selected element can be changed by using innerHTML property with it.<br>
+                This property helps in doing changes even after the webpage gets loaded completely.<br>
+                The id attribute selects the HTML element with that particular id and the innerHTML property<br>
+                define the HTML content
+            </td>
+        </tr>
+        <tr>
+            <td>InnerText</td>
+            <td>The InnerText is the variable of the element object and whatever is provided as a value is written<br> 
+                inside that element. <br>But it should be text only. To display data on text elements like, 
+                headings or paragraph.
+            </td>
+        </tr>
+        <tr>
+            <td>document.write()</td>
+            <td>This method is used for testing purposes, it shows the output within the document's body. It normally <br>
+                displays the content within the scope of the body of the page.</td>
+        </tr>
+    </table>
+    <h1>Define 10 other reserved JS keyword and what they do.</h1>
+    <p style="font-size: 24px;">In any programming language, a reserved word or a reserved identifier is a word that cannot be used as an identifier,
+        such as the name of a variable, function, or label. Thus, it is reserved and cannot be used for defining any
+        of these. This is a syntactic definition, and a reserved word may have no meaning
+    </p>
+    <table border="" cellpadding="7" style="border-collapse: collapse; font-size: 24px;">
+        <tr>
+            <td>1</td>
+            <td>Reserved Word</td>
+            <td>Meaning</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Abstract</td>
+            <td>Abstract is a non-access modifier which is applicable for classes, methods but not variables.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Arguments</td>
+            <td>Argument is an array-like object lists the arguments and a few other properties.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Case</td>
+            <td>The switch statement evaluates an expression. 
+                The value of the expression is then compared with the values of each case in the structure.
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Boolean</td>
+            <td>Boolean is used as a function to get the value of a variable, object, 
+                conditions, expressions, etc. in terms of true or false.</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Break</td>
+            <td>It breaks the loop and continues executing the code after the loop.</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>const</td>
+            <td>The const keyword is used to declare the constant in the function scope.</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Double</td>
+            <td>JavaScript numbers are always stored as double precision floating point numbers</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Delete</td>
+            <td>The enum keyword declares an enumerated type</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Implements</td>
+            <td>The implements keyword is used to implement an interface.</td>
+        </tr>
+    </table><br><br>
+
+    <h1>What are the differences and similarities between let, var and const?</h1>
+    <p style="font-size: 24px;">Differences Between Let, Var, Const</p>
+    <table border="" cellpadding="7" style="border-collapse: collapse; font-size: 24px;">
+        <tr>
+            <th>Var</th>
+            <th>Let</th>
+            <th>Const</th>
+        </tr>
+        <tr>
+            <td>It has been traditionally used to declare variables in JavaScript. It is function scoped, 
+                which means a variable declared inside a function is visible throughout the function. 
+                If var is used outside a function, it becomes a global variable. One key issue with using var 
+                is that it allows redeclaration of the same variable, which could be an unintentional mistake.
+            </td>
+            <td>
+                It was introduced in ES6 and is block scoped, which means a variable declared inside curly 
+                braces {} can not be accessed from outside. Also, let cannot be redeclared within the same scope. 
+                One important thing to note is that let can be updated in the same block.
+            </td>
+            <td>
+                is also introduced in ES6 and like let, it is also block scoped. The only difference is 
+                that const cannot be reassigned within the same scope. This means if a JavaScript 
+                variable is declared with const, it cannot be reassigned or redeclared.
+            </td>
+        </tr>
+    </table><br><br>
+    <h1>Similarities between Var, Let, Const</h1>
+    <p style="font-size: 24px;">
+        Variables declared with const , just like let , are hoisted to the top of their global, local, or block scope 
+        but without a default initialization. var variables, as you've seen earlier, are hoisted with a default value of 
+        undefined so they can be accessed before declaration without errors.
+    </p><br><br>
+
+    <h2>With relevant examples, explain the difference between the three ways you can identify string in JS.</h2>
+    <p style="font-size: 24px;">Single-quoted Strings(''): It is the easiest way to define a string. It can be used it when you want the string to be 
+    exactly as it is written. All the escape sequences like will be output as specified instead of having
+    any special meaning. Single-quote is usually faster in some cases.</p>
+
+    <p style="font-size: 24px;">Double-quoted strings(""): By using Double quotes the code is forced to evaluate the whole 
+    string. The main difference between double quotes and single quotes is that by using double quotes, you can include 
+    variables directly within the string. It interprets the Escape sequences. Each variable will be replaced by its value.</p>
+
+    <p style="font-size: 24px;">Backslash(``) The backslash indicates that the next character should be treated as a literal character rather than as a special 
+    character or string delimiter.</p>
+
+    <nav style="text-align: center;">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="history.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="ass.html">3</a></li>
+        </ul>
+    </nav>
+</body>
+<script src=
+      "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+      crossorigin="anonymous">
+    </script>
+    <script src=
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
+        crossorigin="anonymous">
+    </script>.
+</html>
