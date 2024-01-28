@@ -90,6 +90,40 @@
         }
     </script> <br><br>
 
+
+Function declaration
+<script>
+    let age=function(yearofBirth){
+        let countryretirementAge=65;
+        let currentYear=new Date().getFullYear();
+        let age=currentYear-yearofBirth;
+        return countryretirementAge-age;
+    }
+    let mybirthYear=prompt('which year were you born')
+    alert(`you have ${age(mybirthYear)}years left to retire`)
+</script>
+Function Anonymous
+<script>
+    function myage(yearofBirth){
+        let countryretirementAge=60;
+        let currentYear=new Date().getFullYear();
+        let age=currentYear-yearofBirth;
+        return countryretirementAge-age;
+    }
+    let mybirthYear=prompt('which year were you born')
+    alert(`you have ${myage(mybirthYear)}years left to retire`)
+</script>
+Function Arrow
+<script>
+    let myage=(yearofBirth)=>{
+        let countryretirementAge=60;
+        let currentYear=new Date().getFullYear();
+        let age=currentYear-yearofBirth;
+        return countryretirementAge-age;
+    }
+    let mybirthYear=prompt('which year were you born')
+    alert(`you have ${myage(mybirthYear)}years left to retire`)
+</script>
 <nav style="text-align: center;">
     <ul class="pagination">
         <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
