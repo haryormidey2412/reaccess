@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <script>
+        for(let num=10; num<50; num++){
+            if(num%2===0){
+                continue;
+            }
+            document.write(`${num}<br>`)
+        }
+    </script>
+    <script>
+        let num=prompt(`enter any odd number that you know from 100 to 200`);
+        if(num<100|| num>200){
+            alert('invalid input')
+        }else{
+
+        for( ; num<=200; num++){
+            if(num %2===1){
+                alert(`You are right ${num} is a prime number`);
+                break;
+            }
+            else if(num %2===0){
+                alert(`You are wrong ${num} is not a prime number`)
+                break;
+            }
+        }
+        }
+    </script>
+    <nav style="text-align: center;">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="history.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="ass.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="Differentiate.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="js.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="calculator.html">5</a></li>
+            <li class="page-item"><a class="page-link" href="loop.html">6</a></li>
+            <li class="page-item"><a class="page-link" href="investment.html">Next</a></li>
+        </ul>
+    </nav>
+
+
+<script src=
+"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+crossorigin="anonymous">
+</script>
+<script src=
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
+  crossorigin="anonymous">
+</script>
+</body>
+</html>
