@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Our Current Interest Rate is 20% currently</h3><br><br>
+    <input type="number" id="select"><br><br>
+    <select id="selector">
+        <option value="1">1month</option>
+        <option value="2">2month</option>
+        <option value="3">3month</option>
+        <option value="4">4month</option>
+        <option value="5">5month</option>
+        <option value="6">6month</option>
+        <option value="7">7month</option>
+        <option value="8">8month</option>
+        <option value="9">9month</option>
+        <option value="10">10month</option>
+        <option value="11">11month</option>
+        <option value="12">12month</option>
+    </select><br><br>
+
+    <button id="calculate">Calculate</button><br><br>   
+    <span id="answer"></span>
+
+    <script>
+        let i = document.getElementById('select')
+        let j = document.getElementById('selector')
+        let k = document.getElementById('calculate')
+        let l = document.getElementById('answer')
+        let rate = 0.20;
+        k.addEventListener('click', () => {
+            let t = i.value * rate / j.value
+            l.innerHTML = t
+            calbutton.addEventListener(`you will repay back ${t} at the end of ${j.value} month(s) if you borrow ${i.value} with us`)
+        })
+    </script><br><br>
+
+
+</body>
+</html>

@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
-<body> 
-		<h1>Investment Calculator</h1>  
-		<label for="initial-investment"> Initial Investment (#):</label><br><br>
-		<input type="number"id="initial-investment"placeholder="Enter initial investment"><br><br>
-		<label for="interest-rate">Annual Interest Rate (%):</label><br><br>
-		<input type="number"id="interest-rate"placeholder="Enter annual interest rate"><br><br>
-		<label for="investment-years">Number of Years:</label><br>
-	    <input type="number"id="investment-years"placeholder="Enter number of years"><br><br>
-		<button id="calculate-button">Calculate</button><br><br>
-		<div id="result"class="result-container"></div><br><br>
+
+<body>
+    <input type="number" id="select"><br><br>
+    <select id="selector">
+        <option value="1">1month</option>
+        <option value="2">2month</option>
+        <option value="3">3month</option>
+        <option value="4">4month</option>
+        <option value="5">5month</option>
+        <option value="6">6month</option>
+        <option value="7">7month</option>
+        <option value="8">8month</option>
+        <option value="9">9month</option>
+        <option value="10">10month</option>
+        <option value="11">11month</option>
+        <option value="12">12month</option>
+    </select>
+
+    <h3>Our monthly ROI is 15% currently</h3><br><br>
+    <button id="calculate">Calculate</button>
+    <span id="answer"></span>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () { 
-    const button =document.getElementById("calculate-button"); 
-    const container = document.getElementById("result"); 
-    button.addEventListener("click", function () { 
-        const initialInvestment =(document.getElementById("initial-investment").value); 
-        const interestRate =(document.getElementById("interest-rate").value) / 100; 
-        const investmentYears =(document.getElementById("investment-years").value); 
-        let totalAmount = initialInvestment; 
-
-        for (let i = 1; i <= investmentYears; i++) { 
-            totalAmount *= (1 + interestRate); 
-        } 
-        container.innerHTML=(`After ${investmentYears} years, your investment`+ 
-        ` will be worth #${totalAmount.toFixed(2)}.`); 
-    }); 
-}); 
+        let i = document.getElementById('select')
+        let j = document.getElementById('selector')
+        let k = document.getElementById('calculate')
+        let l = document.getElementById('answer')
+        let rate = 0.15;
+        k.addEventListener('click', () => {
+            let t = i.value * j.value * rate
+            l.innerHTML = t
+            alert(`you will withdraw a total amount of ${t} at the end of ${j.value} months if you invest ${i.value} with us`)
+        })
     </script><br><br>
-
-<nav style="text-align: center;">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="history.html">1</a></li>
-        <li class="page-item"><a class="page-link" href="ass.html">2</a></li>
-        <li class="page-item"><a class="page-link" href="Differentiate.html">3</a></li>
-        <li class="page-item"><a class="page-link" href="js.html">4</a></li>
-        <li class="page-item"><a class="page-link" href="calculator.html">5</a></li>
-        <li class="page-item"><a class="page-link" href="investment.html">Next</a></li>
-    </ul>
-</nav>
 </body>
-<script src=
-      "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
-      crossorigin="anonymous">
+
+
+
+<body>
+    
+    <nav style="text-align: center;">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="history.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="ass.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="Differentiate.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="js.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="calculator.html">5</a></li>
+            <li class="page-item"><a class="page-link" href="investment.html">Next</a></li>
+        </ul>
+    </nav>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
-    <script src=
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
-        crossorigin="anonymous">
-    </script>.
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+
 </html>

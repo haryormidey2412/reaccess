@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess my Number Age</title>
+    <style>
+        body{
+            background: blue;
+        }
+        .rack{
+            background: blue;
+        }
+        input{
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin: 20px;
+            padding: 10px;        
+        }
+        button{
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin: 20px;
+            padding: 10px;  
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="rack" id="game" style="">
+            <input type="text" id="ourguess"><br><br>
+            <button id="start">Guess</button><br><br>
+            <span id="output"></span>
+
+        </div>
+    </div>
+
+    <script>
+
+        const ourinput=document.getElementById("ourguess");
+        const startbtn=document.getElementById("start");
+        let ouroutput=document.getElementById("output");
+        let bagg=document.getElementById('game');
+
+        let secretnumber=Math.trunc((Math.random()*30)+10);
+        console.log(secretnumber)
+
+        let score=30;
+
+        function gameover(){
+            score=score-5;
+            if(score==0){
+                bagg.style.backgroundColor="red"
+                bagg.style.display="none"
+            } 
+            console.log(score)
+        }
+       
+        
+        const  gameengine=function() {
+            if(isNaN(ourinput.value)) {
+                ouroutput.innerHTML="please input a valid number"
+                gameover()
+            } 
+
+            else if(ourinput.value!=secretnumber){
+                ouroutput.innerHTML="You are not correct"
+                bagg.style.backgroundColor="red"
+                gameover()
+            }
+            
+            else if(ourinput.value=secretnumber){
+                ouroutput.innerHTML="Correct you are right"
+                bagg.style.backgroundColor="green"
+                gameover()
+            }
+            else if(ourinput.value=secretnumber){
+                ouroutput.innerHTML="End Game"
+                bagg.style.display="none"
+                bagg.style.backgroundColor="yellow"
+                gameover()
+            }
+        }
+
+        start.addEventListener('click', gameengine)
+    </script>
+</body>
+</html>
