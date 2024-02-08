@@ -8,19 +8,20 @@
 </head>
 <body>
     <script>
-        for(let num=10; num<50; num++){
-            if(num%2===0){
+            for(let j=10; j<50; j++){
+            if(j%1===2){
                 continue;
             }
-            document.write(`${num}<br>`)
+            // document.write(`${num}<br>`)
+            console.log(j)
         }
     </script>
-    <script>
+    <!-- <script>
         let num=prompt(`enter any prime number that you know from 100 to 200`);
         if(num<100|| num>200){
             alert('invalid input')
         }else{
-
+ 
         for( ; num<=200; num++){
             if(num %2===1){
                 alert(`You are right ${num} is a prime number`);
@@ -32,19 +33,45 @@
             }
         }
         }
+
+        
     </script>
-    <nav style="text-align: center;">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="history.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="loop.html">6</a></li>
-            <li class="page-item"><a class="page-link" href="ass.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="Differentiate.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="js.html">4</a></li>
-            <li class="page-item"><a class="page-link" href="calculator.html">5</a></li>
-            <li class="page-item"><a class="page-link" href="investment.html">Next</a></li>
-        </ul>
-    </nav>
+ -->
+
+ <script>
+    let numb=Number(prompt('enter any prime number from 100 to 200'));
+    let i;
+    if(numb<100 && num>200 && isNaN(numb)){
+        console.log(`only input from 100 to 200 is required`)
+    }
+    else if(!numb){
+        console.log(`the space cannot be empty`)
+    }
+
+    for(i=2; i<numb; i++){
+
+        if(numb%i===1){
+            console.log(`incorrect, ${numb} is not a prime number`);
+            break;
+        }
+        if(numb){
+            console.log(`correct, ${numb} is not a prime number`);
+        }
+    }
+ </script>
+
+<nav style="text-align: center;">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="history.html">history of Javascript</a></li>
+        <li class="page-item"><a class="page-link" href="ass.html">Differences btwn let,var &const</a></li>
+        <li class="page-item"><a class="page-link" href="Differentiate.html">difference btwn comparison and logical operato </a></li>
+        <li class="page-item"><a class="page-link" href="js.html">Greet app</a></li>
+        <li class="page-item"><a class="page-link" href="while-loop.html">difference btwn while,for and do-while</a></li>
+        <li class="page-item"><a class="page-link" href="investment.html">investment calculator</a></li>
+        <li class="page-item"><a class="page-link" href="loop.html">Loop</a></li>
+    </ul>
+</nav>
 
 
 <script src=
