@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="ass.css">
-    <script src="ass.js"></script>
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
-
 <body>
-
     <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
             DAY 1
@@ -111,101 +107,59 @@
             </ul>
     </div>
 
-    <button onclick="arm()">
-        <h4>Hire me</h4>
-    </button>
-    <h4>I am Lee Park. Hire me for your company, because my work is <b>off the hizzle.</b> As a proof of
-        my<br>staggering
-        computer skills and monumental work ethic, please enjoy this efectroic resume.</h4><br>
 
-    <button onclick="mar()">
-        <h3>Indispensable Skills</h3>
-    </button>
-    <h4>My skills include:</h4>
+    <h2>With relevant examples, explain the difference between the three ways you can identify string in JS.</h2>
+    <p style="font-size: 24px;">Single-quoted Strings(''): It is the easiest way to define a string. It can be used it
+        when you want the string to be
+        exactly as it is written. All the escape sequences like will be output as specified instead of having
+        any special meaning. Single-quote is usually faster in some cases.</p>
 
-    <ul>
-        <li>Fast typing (nearly 12words/minute)</li>
-        <li>Extraordinary pencil sharpening</li>
-        <li>Inventive excuse making</li>
-        <li>Negotiating with officers of the peace</li>
-    </ul>
-    <h4>And i also know XHTML!</h4><br>
-    <h4>Previous Work Experience</h4>
-    <h4>I have had a long and industrious career in a varieties of trades. Here are some highlights.</h4>
-    <ul>
-        <li>2005-2008 - Worked as a typist in <i>Flying Fingers</i></li>
-        <li>2008-2009 - Perform cutting-edge web design at <i>Riverdale Farm</i></li>
-        <li>2009-2011 - Starred in Chapter 2 of <i>Creating a Website: The Missing Manual</i></li>
-    </ul>
-    <hr> <br> <br>
+    <p style="font-size: 24px;">Double-quoted strings(""): By using Double quotes the code is forced to evaluate the
+        whole
+        string. The main difference between double quotes and single quotes is that by using double quotes, you can
+        include
+        variables directly within the string. It interprets the Escape sequences. Each variable will be replaced by its
+        value.</p>
 
-    <h1>JavaScript History</h1>
-
-    <p>JavaScript was invented by Brendan Eich in 1995.It was developed for Netscape 2,
-        and became the ECMA-262 standard in 1997. After Netscape handed JavaScript over to ECMA,
-        the Mozilla foundation continued to develop JavaScript for the Firefox browser.<br>
-        JavaScript is most widely used nowadays and most preferable language for development
-        as a front-end as well as back-end(Nodejs)
-    </p>
-
-    <p>The history is, Brendan Eich created Mocha which became LiveScript, and later JavaScript.
-        Netscape presented JavaScript to Ecma International, which develops standards and
-        it was renamed to ECMA-262 aka ECMAScript.
-    </p>
-
-    <h2 style="text-align: center;">ECMAscript</h2>
-
-    <p>ECMAScript is a subset of JavaScript. JavaScript is basically ECMAScript at its core but builds upon it.
-        Languages such as ActionScript, JavaScript, JScript all use ECMAScript as its core.
-    </p>
-
-    <ul>
-        <h2 style="text-align: center; font-size: 30px;"><b>ECMAScript as Standard:</b></h2>
-        <li>
-            ECMA-262: The Ecma International (a standards organization) has created the ECMA-262 standard<br>
-            which is the official specification of the ECMAScript language.<br><br>
-        </li><br><br>
-
-        <li>
-            Ecma Technical Committee 39 (TC39): is the group of people (Brendan Eich and others) who develop the
-            ECMA-262 standard.
-        </li><br><br>
-
-        <li>
-            ECMAScript 3 (December 1999). This is the version of ECMAScript that most browsers support today.
-            It introduced many features that have become an inherent part of the language for regular expressions,
-            better string handling, new control statements, try/catch exception handling, tighter definition of errors,
-            formatting for numeric output and other enhancements.
-        </li><br><br>
-
-        <li>
-            ECMAScript 4 (July 2008). ECMAScript 4 was developed as the next version of JavaScript, with a prototype
-            written in ML.
-            However, TC39 could not agree on its feature set. To prevent an impasse, the committee met at the end of
-            July 2008
-            and came to an accord.
-        </li><br><br>
-
-        <li>
-            ECMAScript 5 (December 2009). This version brings several enhancements to the standard library
-            and even updated language semantics via a strict mode. Currently browsers are supporting upto ES5 only.
-        </li><br><br>
-
-        <li>
-            ECMAScript 6(2015):ES6 is an next-gen of JavaScript, the ecma technical committee 39 governs ecma
-            specification, they discovered new features to the javascript.ES6 can`t compile directly in browsers,
-            so need an compiler from ES6 to ES5, for that compiling using babel, it produce the browser compatible
-            javascript.
-        </li>
-    </ul>
+    <p style="font-size: 24px;">Backslash(``) The backslash indicates that the next character should be treated as a
+        literal character rather than as a special
+        character or string delimiter.</p>
 
 
+        <h1>For Array Chain: write three statement list the days of the week but display only when the code is run 
+            in console.log
+        </h1>
+        <script>
+            // let days=newDate(). getDay();
+            // let weekday=[`Monday`, `Tuesday`, `Wednesday`, `Thurday`, `Friday`, `Saturday`, `Sunday`]
+            // console.log(weekday[days])
+
+        let days=new Date().getDay();
+        // alert(days)
+
+        let weekday=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+
+        console.log(weekday[days])
+
+        let person={
+            fname:'Mariam',
+            sname:'Ogundowole',
+            gender:'female',
+            age:'23years of age',
+            occupation:'customer representative officer',
+            state:'Ondo State',
+            lga:'Owo LGA',
+        }
+        console.log(`My name is ${person.fname} ${person.sname} I'm a ${person.gender} I'm ${person.age} my occupation is ${person.occupation} from ${person.state} ${person.lga}`)
+
+
+        </script>
+
+</body>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
         </script>
-</body>
-
 </html>

@@ -9,6 +9,110 @@
 </head>
 
 <body>
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+            DAY 1
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+            <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+        </ul>
+
+        <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+            DAY 2
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+            <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+        </ul>
+
+        <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
+            DAY 3
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+            <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+        </ul>
+
+        <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+            DAY 4
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+            <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+        </ul>
+
+        <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
+            DAY 5
+        </a>
+
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+            <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+        </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
+                DAY 6
+            </a>
+        </ul>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
+                <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
+            </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
+                DAY 7
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
+                <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 8
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
+                DAY 9
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Scope,Hoisting&Closure</a></li>
+            </ul>
+
+
+            <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
+                DAY 10
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
+                <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="methods.html" role="button" data-bs-toggle="dropdown">
+                DAY 11
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+                DAY 12
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
+            </ul>
+    </div>
+
+
     <h1>What are the differences and similarities between let, var and const?</h1>
     <p style="font-size: 24px;">Differences Between Let, Var, Const</p>
     <table border="" cellpadding="7" style="border-collapse: collapse; font-size: 24px;">
@@ -35,59 +139,13 @@
             </td>
         </tr>
     </table><br><br>
+
     <h1>Similarities between Var, Let, Const</h1>
     <p style="font-size: 24px;">
         Variables declared with const , just like let , are hoisted to the top of their global, local, or block scope
         but without a default initialization. var variables, as you've seen earlier, are hoisted with a default value of
         undefined so they can be accessed before declaration without errors.
     </p><br><br>
-
-    <h2>With relevant examples, explain the difference between the three ways you can identify string in JS.</h2>
-    <p style="font-size: 24px;">Single-quoted Strings(''): It is the easiest way to define a string. It can be used it
-        when you want the string to be
-        exactly as it is written. All the escape sequences like will be output as specified instead of having
-        any special meaning. Single-quote is usually faster in some cases.</p>
-
-    <p style="font-size: 24px;">Double-quoted strings(""): By using Double quotes the code is forced to evaluate the
-        whole
-        string. The main difference between double quotes and single quotes is that by using double quotes, you can
-        include
-        variables directly within the string. It interprets the Escape sequences. Each variable will be replaced by its
-        value.</p>
-
-    <p style="font-size: 24px;">Backslash(``) The backslash indicates that the next character should be treated as a
-        literal character rather than as a special
-        character or string delimiter.</p>
-
-
-        <h1>For Array Chain: write three statement list the days of the week but display only when the code is run 
-            in console.log
-        </h1>
-        <script>
-            // let days=newDate(). getDay();
-            // let weekday=[`Monday`, `Tuesday`, `Wednesday`, `Thurday`, `Friday`, `Saturday`, `Sunday`]
-            // console.log(weekday[days])
-
-        let days=new Date().getDay();
-        // alert(days)
-
-        let weekday=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-
-        console.log(weekday[days])
-
-        let person={
-            fname:'Mariam',
-            sname:'Ogundowole',
-            gender:'female',
-            age:'23years of age',
-            occupation:'customer representative officer',
-            state:'Ondo State',
-            lga:'Owo LGA',
-        }
-        console.log(`My name is ${person.fname} ${person.sname} I'm a ${person.gender} I'm ${person.age} my occupation is ${person.occupation} from ${person.state} ${person.lga}`)
-
-
-        </script>
 
         <nav style="text-align: center;">
             <ul class="pagination">
@@ -105,7 +163,7 @@
 
 </body>
 
-s<cript src=
+<script src=
       "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
       crossorigin="anonymous">
