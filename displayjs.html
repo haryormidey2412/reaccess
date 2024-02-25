@@ -1,212 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
 </head>
-<body>    <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
-        DAY 1
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
-        <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
-    </ul>
 
-    <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
-        DAY 2
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
-        <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
-    </ul>
+<body>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
 
-    <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
-        DAY 3
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
-        <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
-    </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
 
-    <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
-        DAY 4
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
-        <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
-    </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
 
-    
-    <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
-        DAY 5
-    </a>
-
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
-        <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
-    </ul>
-
-        <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
-            DAY 6
-        </a>
-    </ul>
-
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
-            <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
-        </ul>
-        <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
-            DAY 7
-        </a>
-
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
-            <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
-        </ul>
-
-        <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
-            data-bs-toggle="dropdown">
-            DAY 8
-        </a>
-
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
-        </ul>
-
-        <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
-            DAY 9
-        </a>
-
-        <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
-            DAY 10
-        </a>
-
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
-            <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
-        </ul>
-
-        <a class="btn btn-secondary dropdown-toggle" href="methods.html" role="button" data-bs-toggle="dropdown">
-            DAY 11
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
-        </ul>
-
-        <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
-            DAY 12
-        </a>
-
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
-        </ul>
-</div>
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
 
 
-    <h1>There are differnet ways to display javascript which ar:</h1>
-    <table border="" style="border-collapse: collapse; font-size: 30px;">
-        <tr>
-            <td>Console.log()</td>
-            <td>Console.log()
-                One of the basic methods to output data to console, 
-                it is good for debugging and listing out errors while not showing them to your visitors on the webpage. 
-                The data you want to output is passed as a parameter in the log() method.
-            </td>
-        </tr>
-        <tr>
-            <td>Alert method</td>
-            <td>The alert method is straightforward and just like console.log() method it expects argument that will be alerted.
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
 
-                But, it has few disadvantages. Firstly, it stops the script to execute while alert box is shown. It requires an 
-                action, like OK, from the user. This pauses the script and might perform badly in some cases. Secondly, the pop-up 
-                might not be very user friendly.
-            </td>
-        </tr>
-        <tr>
-            <td>document.write()</td>
-            <td>The document.write() 
-                method does work and shows the data in the webpage, but it is infamous and is not used frequently. After the DOM loads
-                (ie, webpage loads) and then if document.write() is called, it clears all the data in the document (page) and rewrites
-                with the data provided.
-            </td>
-        </tr>
-        <tr>
-            <td>InnerHTML</td>
-            <td>innerHTML is a variable of element object, but unlike innerText which only sets the innerText, innerHTML changes the HTML. 
-                It can be used in div to enter multiple elements.
-            </td>
-        </tr>
-        <tr>
-            <td>InnerText</td>
-            <td>he InnerText is the variable of the element object and whatever is provided as a value is written inside that element. 
-                But it should be text only.
-            </td>
-        </tr>
-    </table>
+            <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
+                DAY 6
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
+                <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
+            </ul>
 
-    <h2>Reserved Key words: a reserved word or a reserved identifier is a word that cannot be used as an identifier, such as the name of a variable, 
-        function, or label.
-    </h2>
-    <table border="" cellpadding="7" style="border-collapse: collapse; font-size: 30px;">
-        <tr>>
-        <tr>
-            <td>Abstract</td>
-            <td>Abstract is a non-access modifier which is applicable for classes, methods but not variables.</td>
-        </tr><br>
-        <tr>
-            <td>Arguments</td>
-            <td>Argument is an array-like object lists the arguments and a few other properties.</td>
-        </tr><br>
-        <tr>
-            <td>Awaits</td>
-            <td>The keyword Await makes JavaScript wait until the promise returns a result.</td>
-        </tr><br>
-        <tr>
-            <td>Boolean</td>
-            <td>Boolean is used as a function to get the value of a variable, object, conditions, 
-                expressions, etc. in terms of true or false.</td>
-        </tr><br>
-        <tr>
-            <td>Break</td>
-            <td>It breaks the loop and continues executing the code after the loop.</td>
-        </tr><br>
-        <tr>
-            <td>Case</td>
-            <td>The switch statement evaluates an expression. The value of the expression 
-                is then compared with the values of each case in the structure.</td>
-        </tr><br>
-        <tr>
-            <td>Const</td>
-            <td>The const keyword is used to declare the constant in the function scope.</td>
-        </tr><br>
-        <tr>
-            <td>Default</td>
-            <td>The default keyword can be within a switch statement, or with an export statement.</td>
-        </tr><br>
-        <tr>
-            <td>Else</td>
-            <td>It is a part of JavaScript’s Conditional Statements and you can use this to perform 
-                different actions based on different conditions.</td>
-        </tr><br>
-        <tr>
-            <td>False</td>
-            <td>JavaScript includes a Boolean object to represent true or false. It considers null as false.</td>
-        </tr><br>
-    </table>
+            <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
+                DAY 7
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 8
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
+                DAY 9
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
+                DAY 10
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
+                <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="methods.html" role="button" data-bs-toggle="dropdown">
+                DAY 11
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 12
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
+            </ul>
+        </div>
+
+        
+        <h1>There are differnet ways to display javascript which ar:</h1>
+        <table border="" style="border-collapse: collapse; font-size: 30px;">
+            <tr>
+                <td>Console.log()</td>
+                <td>Console.log()
+                    One of the basic methods to output data to console,
+                    it is good for debugging and listing out errors while not showing them to your visitors on the
+                    webpage.
+                    The data you want to output is passed as a parameter in the log() method.
+                </td>
+            </tr>
+            <tr>
+                <td>Alert method</td>
+                <td>The alert method is straightforward and just like console.log() method it expects argument that will
+                    be alerted.
+
+                    But, it has few disadvantages. Firstly, it stops the script to execute while alert box is shown. It
+                    requires an
+                    action, like OK, from the user. This pauses the script and might perform badly in some cases.
+                    Secondly, the pop-up
+                    might not be very user friendly.
+                </td>
+            </tr>
+            <tr>
+                <td>document.write()</td>
+                <td>The document.write()
+                    method does work and shows the data in the webpage, but it is infamous and is not used frequently.
+                    After the DOM loads
+                    (ie, webpage loads) and then if document.write() is called, it clears all the data in the document
+                    (page) and rewrites
+                    with the data provided.
+                </td>
+            </tr>
+            <tr>
+                <td>InnerHTML</td>
+                <td>innerHTML is a variable of element object, but unlike innerText which only sets the innerText,
+                    innerHTML changes the HTML.
+                    It can be used in div to enter multiple elements.
+                </td>
+            </tr>
+            <tr>
+                <td>InnerText</td>
+                <td>he InnerText is the variable of the element object and whatever is provided as a value is written
+                    inside that element.
+                    But it should be text only.
+                </td>
+            </tr>
+        </table>
+
+        <h2>Reserved Key words: a reserved word or a reserved identifier is a word that cannot be used as an identifier,
+            such as the name of a variable,
+            function, or label.
+        </h2>
+        <table border="" cellpadding="7" style="border-collapse: collapse; font-size: 30px;">
+            <tr>>
+            <tr>
+                <td>Abstract</td>
+                <td>Abstract is a non-access modifier which is applicable for classes, methods but not variables.</td>
+            </tr><br>
+            <tr>
+                <td>Arguments</td>
+                <td>Argument is an array-like object lists the arguments and a few other properties.</td>
+            </tr><br>
+            <tr>
+                <td>Awaits</td>
+                <td>The keyword Await makes JavaScript wait until the promise returns a result.</td>
+            </tr><br>
+            <tr>
+                <td>Boolean</td>
+                <td>Boolean is used as a function to get the value of a variable, object, conditions,
+                    expressions, etc. in terms of true or false.</td>
+            </tr><br>
+            <tr>
+                <td>Break</td>
+                <td>It breaks the loop and continues executing the code after the loop.</td>
+            </tr><br>
+            <tr>
+                <td>Case</td>
+                <td>The switch statement evaluates an expression. The value of the expression
+                    is then compared with the values of each case in the structure.</td>
+            </tr><br>
+            <tr>
+                <td>Const</td>
+                <td>The const keyword is used to declare the constant in the function scope.</td>
+            </tr><br>
+            <tr>
+                <td>Default</td>
+                <td>The default keyword can be within a switch statement, or with an export statement.</td>
+            </tr><br>
+            <tr>
+                <td>Else</td>
+                <td>It is a part of JavaScript’s Conditional Statements and you can use this to perform
+                    different actions based on different conditions.</td>
+            </tr><br>
+            <tr>
+                <td>False</td>
+                <td>JavaScript includes a Boolean object to represent true or false. It considers null as false.</td>
+            </tr><br>
+        </table>
+    </div>
 </body>
 
-    <script src=
-      "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
-      crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
-    <script src=
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
-        crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
 
 </html>

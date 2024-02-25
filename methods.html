@@ -1,76 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        body{
-            font-size: 24px;
+<style>
+    body {
+        font-size: 24px;
+    }
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
         }
-    </style>
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
-            DAY 1
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
-            <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
-        </ul>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
-            DAY 2
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
-            <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
-            DAY 3
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
-            <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
-            DAY 4
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
-            <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
 
-        
-        <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
-            DAY 5
-        </a>
-
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
-            <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
                 DAY 6
             </a>
-        </ul>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
                 <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
             </ul>
+
             <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
                 DAY 7
             </a>
-
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
                 <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
             </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
@@ -85,11 +105,13 @@
             <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
                 DAY 9
             </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
                 DAY 10
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
                 <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
@@ -102,129 +124,163 @@
                 <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
             </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
                 DAY 12
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
             </ul>
+        </div>
+
+        <h1>STRINGS METHOD:</h1>
+        <p>The String object is used to represent and manipulate a sequence of characters.Strings are useful for holding
+            data
+            that can be represented in text form. Some of the most-used operations on strings are to check their length,
+            to build and concatenate them using the + and += string operators.<br>Examples of String methods are:
+        </p>
+        <ol style="text-align: justify; word-spacing: 5px;">
+            <li>String.indexOf:<br>The indexOf() method of String values searches this string and returns the index of
+                the first
+                occurrence of the specified substring. It takes an optional starting position and returns the first
+                occurrence
+                of the specified substring at an index greater than or equal to the specified number.
+            </li><br>
+            <li>String Concat():<br>The concat() method of String values concatenates the string arguments to this
+                string and
+                returns a new string.
+            </li><br>
+            <li>String font-color(): fontcolor() method of String values creates a string that embeds this string in a
+                <font>
+                    element, which causes this string to be displayed in the specified font color.<br>The fontcolor()
+                    method itself
+                    simply joins the string parts together without any validation or normalization. However, to create
+                    valid <font>
+                        elements, if you express color as a hexadecimal RGB triplet, you must use the format rrggbb.
+            </li><br>
+            <li>String.raw():The String.raw() static method is a tag function of template literals. This is similar to
+                the r
+                prefix in Python, or the @ prefix in C# for string literals. It's used to get the raw string form of
+                template
+                literals
+            </li><br>
+            <li>String.prototype.sub():The sub() method of String values creates a string that embeds this string in a
+                <sub>
+                    element (<sub>str</sub>), which causes this string to be displayed as subscript.
+                    <br></li>
+        </ol>
+
+        <h1>ARRAY METHODS</h1>
+        <p>The Array object, as with arrays in other programming languages, enables storing a collection of multiple
+            items under
+            a single variable name, and has members for performing common array operations.<br>Examples of Array Methods
+            are:
+        </p>
+        <ol>
+            <li>Array.prototype.forEach(): The forEach() method of Array instances executes a provided function once for
+                each
+                array element.
+            </li><br>
+            <li>Array.from():The Array.from() static method creates a new, shallow-copied Array instance from an
+                iterable or
+                array-like object.
+            </li><br>
+            <li>Array.prototype.slice():The slice() method of Array instances returns a shallow copy of a portion of an
+                array
+                into a new array object selected from start to end (end not included) where start and end represent the
+                index of items in that array. The original array will not be modified.
+            </li><br>
+            <li>Array.prototype.toReversedThe toReversed() method of Array instances is the copying counterpart of the
+                reverse
+                () method. It returns a new array with the elements in reversed order.
+            </li><br>
+            <li>Array.prototype.toString():The toString() method of Array instances returns a string representing the
+                specified
+                array and its elements.
+            </li><br>
+        </ol>
+
+        <h1>NUMBER METHODS</h1>
+        <p>Number values represent floating-point numbers like 37 or -9.25.The Number constructor contains constants and
+            methods
+            for working with numbers. Values of other types can be converted to numbers using the Number() function.
+        </p>
+        <ol>
+            <li>Number.isInteger():The Number.isInteger() static method determines whether the passed value is an
+                integer.</li><br>
+            <li>Number.isNaN():The Number.isNaN() static method determines whether the passed value is the number value
+                NaN,
+                and returns false if the input is not of the Number type. It is a more robust version of the original,
+                global isNaN() function.
+            </li><br>
+            <li>Number.prototype.valueOf():The valueOf() method of Number values returns the value of this number.</li>
+            <br>
+            <li>Number.prototype.toString():The toString() method of Number values returns a string representing
+                this number value.
+            </li><br>
+            <li>Number.prototype.toExponential():The toExponential() method of Number values returns a string
+                representing
+                this number in exponential notation.
+            </li><br>
+        </ol>
+        <h1>MATH METHOD</h1>
+        <p>The Math namespace object contains static properties and methods for mathematical constants and functions.
+        </p>
+        <ol>
+            <li>Math.abs():The Math.abs() static method returns the absolute value of a number.</li><br>
+            <li>Math.random():The Math.random() static method returns a floating-point, pseudo-random number that's
+                greater
+                than or equal to 0 and less than 1, with approximately uniform distribution over that range — which
+                you can then scale to your desired range. The implementation selects the initial seed to the random
+                number
+                generation algorithm; it cannot be chosen or reset by the user.
+            </li><br>
+            <li>Math.trunc():The Math.trunc() static method returns the integer part of a number by removing any
+                fractional
+                digits.
+            </li><br>
+            <li>Math.round():The Math.round() static method returns the value of a number rounded to the nearest
+                integer.</li><br>
+            <li>Math.pow():The Math.pow() static method returns the value of a base raised to a power. That is
+                Math.pow(x,y)=x
+                <sup>y</sup>
+            </li><br>
+        </ol>
+        <h1>OBJECT METHOD</h1>
+        <p> It is used to store various keyed collections and more complex entities. Objects can be created using the
+            Object()
+            constructor or the object initializer/literal syntax.
+        </p>
+        <ol>
+            <li>Object.assign():The Object.assign() static method copies all enumerable own properties from one or more
+                source
+                objects to a target object. It returns the modified target object.
+            </li><br>
+            <li>Object.is():Object.is() static method determines whether two values are the same value.</li><br>
+            <li>Object.isExtensible():The Object.isExtensible() static method determines if an object is extensible
+                (whether
+                it can have new properties added to it).
+            </li><br>
+            <li>Object.isFrozen():The Object.isFrozen() static method determines if an object is frozen.</li><br>
+            <li>Object.seal():Object.seal()static method seals an object. Sealing an object prevents extensions and
+                makes
+                existing properties non-configurable. A sealed object has a fixed set of properties: new properties
+                cannot
+                be added, existing properties cannot be removed, their enumerability and configurability cannot be
+                changed,
+                and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as
+                they
+                are writable. seal() returns the same object that was passed in.
+            </li><br>
+        </ol>
     </div>
-
-
-<h1>STRINGS METHOD:</h1>
-<p>The String object is used to represent and manipulate a sequence of characters.Strings are useful for holding data 
-    that can be represented in text form. Some of the most-used operations on strings are to check their length, 
-    to build and concatenate them using the + and += string operators.<br>Examples of String methods are:
-</p>
-<ol style="text-align: justify; word-spacing: 5px;">
-    <li>String.indexOf:<br>The indexOf() method of String values searches this string and returns the index of the first 
-        occurrence of the specified substring. It takes an optional starting position and returns the first occurrence 
-        of the specified substring at an index greater than or equal to the specified number.
-    </li><br>
-    <li>String Concat():<br>The concat() method of String values concatenates the string arguments to this string and
-        returns a new string.
-    </li><br>
-    <li>String font-color(): fontcolor() method of String values creates a string that embeds this string in a <font> 
-        element, which causes this string to be displayed in the specified font color.<br>The fontcolor() method itself 
-        simply joins the string parts together without any validation or normalization. However, to create valid <font> 
-        elements, if you express color as a hexadecimal RGB triplet, you must use the format rrggbb.
-    </li><br>
-    <li>String.raw():The String.raw() static method is a tag function of template literals. This is similar to the r 
-        prefix in Python, or the @ prefix in C# for string literals. It's used to get the raw string form of template 
-        literals
-    </li><br>
-    <li>String.prototype.sub():The sub() method of String values creates a string that embeds this string in a <sub> 
-        element (<sub>str</sub>), which causes this string to be displayed as subscript.
-    <br></li>
-</ol>
-
-<h1>ARRAY METHODS</h1>
-<p>The Array object, as with arrays in other programming languages, enables storing a collection of multiple items under
-    a single variable name, and has members for performing common array operations.<br>Examples of Array Methods are:
-</p>
-<ol>
-    <li>Array.prototype.forEach(): The forEach() method of Array instances executes a provided function once for each 
-        array element.
-    </li><br>
-    <li>Array.from():The Array.from() static method creates a new, shallow-copied Array instance from an iterable or 
-        array-like object.
-    </li><br>
-    <li>Array.prototype.slice():The slice() method of Array instances returns a shallow copy of a portion of an array 
-        into a new array object selected from start to end (end not included) where start and end represent the 
-        index of items in that array. The original array will not be modified.
-    </li><br>
-    <li>Array.prototype.toReversedThe toReversed() method of Array instances is the copying counterpart of the reverse
-        () method. It returns a new array with the elements in reversed order.
-    </li><br>
-    <li>Array.prototype.toString():The toString() method of Array instances returns a string representing the specified 
-        array and its elements.
-    </li><br>
-</ol>
-
-<h1>NUMBER METHODS</h1>
-<p>Number values represent floating-point numbers like 37 or -9.25.The Number constructor contains constants and methods 
-    for working with numbers. Values of other types can be converted to numbers using the Number() function.
-</p>
-<ol>
-    <li>Number.isInteger():The Number.isInteger() static method determines whether the passed value is an integer.</li><br>
-    <li>Number.isNaN():The Number.isNaN() static method determines whether the passed value is the number value NaN, 
-        and returns false if the input is not of the Number type. It is a more robust version of the original, 
-        global isNaN() function.
-    </li><br>
-    <li>Number.prototype.valueOf():The valueOf() method of Number values returns the value of this number.</li><br>
-    <li>Number.prototype.toString():The toString() method of Number values returns a string representing 
-        this number value.
-    </li><br>
-    <li>Number.prototype.toExponential():The toExponential() method of Number values returns a string representing 
-        this number in exponential notation.
-    </li><br>
-</ol>
-<h1>MATH METHOD</h1>
-<p>The Math namespace object contains static properties and methods for mathematical constants and functions.</p>
-<ol>
-    <li>Math.abs():The Math.abs() static method returns the absolute value of a number.</li><br>
-    <li>Math.random():The Math.random() static method returns a floating-point, pseudo-random number that's greater 
-        than or equal to 0 and less than 1, with approximately uniform distribution over that range — which 
-        you can then scale to your desired range. The implementation selects the initial seed to the random number 
-        generation algorithm; it cannot be chosen or reset by the user.
-    </li><br>
-    <li>Math.trunc():The Math.trunc() static method returns the integer part of a number by removing any fractional 
-        digits.
-    </li><br>
-    <li>Math.round():The Math.round() static method returns the value of a number rounded to the nearest integer.</li><br>
-    <li>Math.pow():The Math.pow() static method returns the value of a base raised to a power. That is Math.pow(x,y)=x
-        <sup>y</sup>
-    </li><br>
-</ol>
-<h1>OBJECT METHOD</h1>
-<p> It is used to store various keyed collections and more complex entities. Objects can be created using the Object() 
-    constructor or the object initializer/literal syntax.
-</p>
-<ol>
-    <li>Object.assign():The Object.assign() static method copies all enumerable own properties from one or more source 
-        objects to a target object. It returns the modified target object.
-    </li><br>
-    <li>Object.is():Object.is() static method determines whether two values are the same value.</li><br>
-    <li>Object.isExtensible():The Object.isExtensible() static method determines if an object is extensible (whether 
-        it can have new properties added to it).
-    </li><br>
-    <li>Object.isFrozen():The Object.isFrozen() static method determines if an object is frozen.</li><br>
-    <li>Object.seal():Object.seal()static method seals an object. Sealing an object prevents extensions and makes 
-        existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot 
-        be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, 
-        and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they 
-        are writable. seal() returns the same object that was passed in.
-    </li><br>
-</ol>
-
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-</script>
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-</script>
+    </script>
 
 </html>

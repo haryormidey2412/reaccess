@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="formvalidate.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+        body{
+            display: flex;
+            padding: 10px;
+            margin: 40px;
+        }
+        input{
+            width: 500px;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
-            DAY 1
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
-            <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
-        </ul>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
-            DAY 2
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
-            <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
-            DAY 3
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
-            <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
-            DAY 4
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
-            <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
 
-        
-        <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
-            DAY 5
-        </a>
 
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
-            <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
                 DAY 6
             </a>
-        </ul>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
                 <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
             </ul>
+
             <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
                 DAY 7
             </a>
-
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
                 <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
             </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
                 data-bs-toggle="dropdown">
                 DAY 8
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
             </ul>
@@ -80,11 +114,14 @@
             <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
                 DAY 9
             </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
+
 
             <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
                 DAY 10
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
                 <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
@@ -97,23 +134,167 @@
                 <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
             </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
                 DAY 12
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
             </ul>
-    </div>
 
+        </div>
+
+        <form action="">
+            <table>
+                <p>Account details</p>
+                <tr>
+                    <td>
+                            <label for="username">Pick a username</label>
+                            <input id="username" oninput="usernamevalidate()">
+                            <span id="usernameError" class="error"></span>
+                    </td>
+                    <td>
+                            <label for="password">Create a password</label>
+                            <input id="password" oninput="passwordvalidate()">
+                            <span id="passwordError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="firstname">First Name*</label>
+                        <input id="firstname" oninput="firstnamelove()">
+                    </td>
+                    <td>
+                        <label for="lastname">Last Name*</label>
+                        <input id="lastname" oninput="lastnamelove()">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="organization">Organization*</label>
+                        <input id="organization" oninput="organizationlove()">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="phone number">Phone Number*</label>
+                        <input id="phone number" oninput="phonelove()">
+                    </td>
+                    <td>
+                            <label for="Email">Email*</label>
+                            <input id="email" oninput="emailvalidate()">
+                            <span id="EmailError" class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Address">Address Line 1*</label>
+                        <input id="Address" oninput="Addresslove()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Address 2"></label>
+                        <input id="Addresss2" oninput="Address2love()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city">City</label>
+                        <input id="city" oninput="citylove()">
+                    </td>
+                    <td>
+                        <label for="state">State/Province*</label>
+                        <input id="state" oninput="statelove()">
+                    </td>
+                    <td>
+                        <label for="Zip">Zip/Postal*</label>
+                        <input id="Zip" oninput="Ziplove()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Country*
+                        <select>
+                            <option value="">USA</option>
+                            <option value="">UK</option>
+                            <option value="">Algeria</option>
+                            <option value="">Ghana</option>
+                            <option value="">Nigeria</option>
+                            <option value="">Tanzania</option>
+                            <option value="">India</option>
+                        </select>
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+
+        <script>
+            const mynumb = /^[0-9]+$/;
+            const emailformat = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+            const passwordformat =   /^(?=.+[!@#$%^&(),.?":{}|<>])(?=.+\d)(?=.+[a-zA-Z]).{8,16}$/;;
+
+            let mariam=document.getElementById('Account details');
+            let myusername=document.getElementById('username');
+            let myusermessage=document.getElementById('usernameError');
+            let mypassword=document.getElementById('password');
+            let passmessage=document.getElementById('passwordError');
+            let email=document.getElementById('Email');
+            let emailmessage=document.getElementById('emailerror');
+
+            let peak;
+            function usernamevalidate(){
+                if(!myusername.value){
+                    myusermessage.textContent='username is necessary';
+                    peak=false;
+                }
+                else{
+                    myusermessage.textContent='correct way it is needed';
+                }
+            }
+
+            function passwordvalidate(){
+                if(!mypassword.value.match(passwordformat)){
+                    passmessage.textContent='Minimum of 7 characters';
+                    passmessage.style.color="red"
+                    peak=false;
+                }
+                else if(!mypassword.value.match(passwordformat)){
+                    passmessage.textContent='Must contain 1 number/symbol';
+                    passmessage.style.color="red"
+                    peak=false;
+                }
+                else{
+                passmessage.textContent='strong password';
+                passmessage.style.color="green";
+        }
+        }
+
+        // function emailvalidate(){
+        //     if(!email.value.match(emailformat)){
+        //         emailmessage.textContent='Enter a valid Email address';
+        //         peak=false;
+        //     }
+        //     else{
+        //         emailmessage.textContent='Valid Email address'
+        //     }
+        // }
+
+
+        </script>
 
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-</script>
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-</script>
+    </script>
 
 </html>

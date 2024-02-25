@@ -1,81 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
-        button{
+        button {
             width: 200px;
             background: goldenrod;
             color: whitesmoke;
             padding: 50px;
             margin: 30px;
-            border-radius:100px 100px 100px 100px;
+            border-radius: 100px 100px 100px 100px;
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
-            DAY 1
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
-            <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
-        </ul>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
-            DAY 2
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
-            <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
-            DAY 3
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
-            <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
-            DAY 4
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
-            <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
 
-        
-        <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
-            DAY 5
-        </a>
 
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
-            <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
                 DAY 6
             </a>
-        </ul>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
                 <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
             </ul>
+
             <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
                 DAY 7
             </a>
-
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
                 <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
             </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
@@ -90,6 +113,9 @@
             <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
                 DAY 9
             </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
                 DAY 10
@@ -107,76 +133,73 @@
                 <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
             </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
                 DAY 12
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
             </ul>
+        </div>
+
+
+
+        <h1 style="text-align: center;">Assignment</h1>
+        <p style="font-size: 30px;">
+            Greet your app visitor: good morning, good afternoon or good evening depending
+            on the time they open your app using your knowledge of control flow.<br><br>
+            Build a guess Nigeria age quiz using switch
+        </p>
+
+        <button onclick="SAVE()">GREET</button>
+        <script>
+            function SAVE() {
+                let current = new Date().getHours()
+                console.log(current)
+                if (current >= 24.00 && current <= 6.00) {
+                    alert(`You should be sleeping by now`)
+                }
+                if (current >= 6.00 && current <= 11.59) {
+                    alert(`Good Morning`)
+                }
+                if (current >= 12.00 && current <= 15.00) {
+                    alert(`Good Afternoon`)
+                }
+                if (current >= 15.00 && current <= 21.59) {
+                    alert(`Good Evening`)
+                }
+                if (current >= 22.00 && current <= 23.59) {
+                    alert(`Bed time!Go and sleep`)
+                }
+            }
+
+
+            let question = prompt('What Is Nigeria Age?')
+            switch (+question) {
+                case 53:
+                    alert(`The age isn't correct`);
+                    break;
+                case 72:
+                    alert(`Not correct`);
+                    break;
+                case 69:
+                    alert(`Not valid`);
+                    break;
+                case 63:
+                    alert(`Correct`);
+                    break;
+                default:
+                    alert(`Incorrect`);
+            }
+        </script><br><br>
     </div>
-
-
-
-    <h1 style="text-align: center;">Assignment</h1>
-    <p style="font-size: 30px;">
-        Greet  your app visitor: good morning, good afternoon or good evening depending 
-        on the time they open your app using your knowledge of control flow.<br><br>  
-        Build a guess Nigeria age quiz using switch
-    </p>
-
-    <button onclick="SAVE()">GREET</button>
-    <script>
-        function SAVE(){
-            let current = new Date().getHours()
-            console.log(current)
-            if(current>=24.00&&current<=6.00){
-                alert(`You should be sleeping by now`)
-            }
-            if(current>=6.00&&current<=11.59){
-                alert(`Good Morning`)
-            }
-            if(current>=12.00&&current<=15.00){
-                alert(`Good Afternoon`)
-            }
-            if(current>=15.00&&current<=21.59){
-                alert(`Good Evening`)
-            }
-            if(current>=22.00&&current<=23.59){
-                alert(`Bed time!Go and sleep`)
-            }
-        }
-
-
-        let question=prompt('What Is Nigeria Age?')
-            switch(+question){
-            case 53:
-                alert(`The age isn't correct`);
-                break;
-            case 72:
-                alert(`Not correct`);
-                break;
-            case 69:
-                alert(`Not valid`);
-                break;
-            case 63:
-                alert(`Correct`);
-                break;
-            default:
-                alert(`Incorrect`);
-        }
-    </script><br><br>
-
 </body>
 
-<script src=
-      "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
-      crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
-    <script src=
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
-        crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>.
+
 </html>

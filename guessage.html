@@ -1,109 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess my Number Age</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
-        body{
-            background: blue;
-        }
-        .rack{
-            background: blue;
-        }
-        input{
+        input {
             width: 200px;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             margin: 20px;
-            padding: 10px;        
+            padding: 10px;
         }
-        button{
+
+        button {
             width: 200px;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             margin: 20px;
-            padding: 10px;  
+            padding: 10px;
+        }
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
-            DAY 1
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
-            <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
-        </ul>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
-            DAY 2
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
-            <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
-            DAY 3
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
-            <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
-            DAY 4
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
-            <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
 
-        
-        <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
-            DAY 5
-        </a>
 
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
-            <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
                 DAY 6
             </a>
-        </ul>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
                 <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
             </ul>
+
             <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
                 DAY 7
             </a>
-
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
                 <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
             </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
                 data-bs-toggle="dropdown">
                 DAY 8
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
             </ul>
-
+            
             <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
                 DAY 9
             </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
                 DAY 10
@@ -121,82 +139,128 @@
                 <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
             </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
                 DAY 12
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
             </ul>
-    </div>
-
-
-
-    <div>
-        <div class="rack" id="game" style="">
-            <input type="text" id="ourguess"><br><br>
-            <button id="start">Guess</button><br><br>
-            <span id="output"></span>
-
         </div>
-    </div>
 
-    <script>
-
-        const ourinput=document.getElementById("ourguess");
-        const startbtn=document.getElementById("start");
-        let ouroutput=document.getElementById("output");
-        let bagg=document.getElementById('game');
-
-        let secretnumber=Math.trunc((Math.random()*30)+10);
-        console.log(secretnumber)
-
-        let score=30;
-
-        function gameover(){
-            score=score-5;
-            if(score==0){
-                bagg.style.backgroundColor="red"
-                bagg.style.display="none"
-            } 
-            console.log(score)
-        }
-       
         
-        const  gameengine=function() {
-            if(isNaN(ourinput.value)) {
-                ouroutput.innerHTML="please input a valid number"
-                gameover()
-            } 
+        <h3 style="color: white; font-size: 24px;  text-align: center; margin-bottom: 10%;">Guess My Number Game</h3>
+        <div class="back">
+            <input type="text" name="" id="number" placeholder="Enter Your Number"><br><br>
+            <span id="output"></span><br><br>
+            <button id="guess">Guess</button>
+            <button id="play" style="display: none; font-variant: small-caps;">Play Again</button><br><br>
+            <p style="display: none;" id="paragraph"></p>
+            <p style="color: white;  font-size: 20px; ">High Score &nbsp;<span id="highscore">0</span></p>
+            <p style="color: white;  font-size: 20px;">Chances &nbsp;<span id="chances">5</span></p>
+        </div>
+        <script>
+            const number = document.getElementById('number');
+            const guess = document.getElementById('guess');
+            let output = document.getElementById('output');
+            let gamebackground = document.querySelector('.back');
+            let ptag = document.getElementById('paragraph');
+            let playagainbtn = document.getElementById('play');
+            let highscore = document.getElementById("highscore");
+            let chance = document.getElementById("chances");
 
-            else if(ourinput.value!=secretnumber){
-                ouroutput.innerHTML="You are not correct"
-                bagg.style.backgroundColor="red"
-                gameover()
-            }
-            
-            else if(ourinput.value=secretnumber){
-                ouroutput.innerHTML="Correct you are right"
-                bagg.style.backgroundColor="green"
-                gameover()
-            }
-            else if(ourinput.value=secretnumber){
-                ouroutput.innerHTML="End Game"
-                bagg.style.display="none"
-                bagg.style.backgroundColor="yellow"
-                gameover()
-            }
-        }
 
-        start.addEventListener('click', gameengine)
-    </script>
+            let highscorevalue = 35;
+
+            let secretnumber = Math.trunc((Math.random() * 40) + 0);
+            let score = 30;
+            let chances = 6;
+
+            function gameover() {
+                score = score - 5
+                console.log(score);
+                chances = chances - 1;
+                chance.innerHTML = chances;
+
+                if (score == 0) {
+                    gamebackground.style.backgroundColor = "red";
+                    number.style.display = "none";
+                    guess.style.display = "none";
+                    output.style.fontSize = "100px";
+                    output.style.fontFamily = "monospace";
+                    output.style.fontVariant = "smallCap";
+                    output.innerHTML = "GAME OVER";
+                    output.style.color = "white";
+                }
+
+            }
+
+            const game = function () {
+                if (isNaN(number.value) || number.value == "") {
+                    gamebackground.style.backgroundColor = "black"
+                    output.innerHTML = "Input Valid Number";
+                    output.style.display = "inline";
+                    output.style.color = "white";
+                    output.style.fontSize = "20px";
+                    gameover()
+                }
+                else if (number.value > secretnumber) {
+                    gamebackground.style.backgroundColor = ""
+                    output.innerHTML = "Your Guessing Is Too High";
+                    output.style.display = "inline";
+                    output.style.fontSize = "20px";
+                    output.style.color = "black";
+                    gameover()
+
+                }
+                else if (number.value < secretnumber) {
+                    gamebackground.style.backgroundColor = "green"
+                    output.innerHTML = "Your Guessing Is Too Low";
+                    output.style.display = "inline";
+                    output.style.fontSize = "20px";
+                    output.style.color = "brown";
+                    gameover()
+
+                }
+                else if (number.value == secretnumber) {
+                    output.innerHTML = "You Are Correct";
+                    gamebackground.style.backgroundColor = "green";
+                    output.style.display = "inline";
+                    output.style.color = "white";
+                    output.style.fontSize = "20px";
+                    guess.style.display = "none";
+                    number.style.display = "none";
+                    playagainbtn.style.display = "inline";
+                    if (score > highscorevalue) {
+                        highscore.innerHTML = score;
+                    }
+
+                }
+
+            }
+
+            guess.addEventListener('click', game);
+            playagainbtn.addEventListener('click', () => {
+                number.style.display = "inline";
+                guess.style.display = "inline";
+                gamebackground.style.backgroundColor = "black";
+                secretnumber = Math.trunc((Math.random() * 30) + 0);
+                playagainbtn.style.display = "none";
+                number.value = "";
+                score = 30;
+                chances = 6;
+                chance.innerHTML = chances;
+            })
+
+        </script>
+    </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-</script>
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-</script>
+    </script>
 
 </html>

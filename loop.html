@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loop</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
-            DAY 1
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
-            <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
-        </ul>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
-            DAY 2
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
-            <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button" data-bs-toggle="dropdown">
-            DAY 3
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
-            <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
 
-        <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
-            DAY 4
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
-            <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
 
-        
-        <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
-            DAY 5
-        </a>
 
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
-            <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
-        </ul>
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
                 DAY 6
             </a>
-        </ul>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
                 <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
             </ul>
+
             <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
                 DAY 7
             </a>
-
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
                 <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
             </ul>
 
             <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
                 data-bs-toggle="dropdown">
                 DAY 8
             </a>
-
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
             </ul>
@@ -80,7 +102,10 @@
             <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
                 DAY 9
             </a>
-
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
+            
             <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
                 DAY 10
             </a>
@@ -97,75 +122,93 @@
                 <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
             </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
                 DAY 12
             </a>
 
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
             </ul>
+        </div>
+
+        <h1>Compare and Contrast between For-loop,While-loop and Do-while-loop</h1>
+        <table>
+            <tr>
+                <th>For-loop</th>
+                <th>While-loop</th>
+                <th>Do-while loop</th>
+            </tr>
+            <tr>
+                <td>Syntax: For(initialization; condition;updating), { . Statements; }</td>
+                <td>Syntax: While(condition), { . Statements; . }</td>
+                <td>Syntax: Do { . Statements; } While(condition);</td>
+            </tr><br>
+            <tr>
+                <td>It is known as entry controlled loop</td>
+                <td>It is known as entry controlled loop.</td>
+                <td>It is known as exit controlled loop.</td>
+            </tr><br>
+            <tr>
+                <td>If the condition is not true first time than control will never enter in a loop</td>
+                <td>If the condition is not true first time than control will never enter in a loop.</td>
+                <td>Even if the condition is not true for the first time the control will enter in a loop.</td>
+            </tr><br>
+            <tr>
+                <td>There is no semicolon; after the condition in the syntax of the for loop.</td>
+                <td>There is no semicolon; after the condition in the syntax of the while loop.</td>
+                <td>There is semicolon; after the condition in the syntax of the do while loop.</td>
+            </tr><br>
+            <tr>
+                <td>Initialization and updating is the part of the syntax.</td>
+                <td>Initialization and updating is not the part of the syntax.</td>
+                <td>nitialization and updating is not the part of the syntax</td>
+            </tr><br>
+            <tr>
+                <td>For loop is use when we know the number of iterations means where the loop will terminate.</td>
+                <td>While loop is use when we don't know the number of iterations means where the loop will terminate.</td>
+                <td>Do while loop is use when we don't know the number of iterations means where the loop will terminate.
+                </td>
+            </tr><br>
+        </table><br><br>
+    
+        <script>
+            for (let j = 10; j < 50; j++) {
+                if (j % 1 === 1) {
+                    break;
+                }
+                console. log(`${j} is prime:`); 
+            }
+
+            let numb = Number(prompt('enter any prime number from 100 to 200'));
+            let i;
+            if (numb < 100 && num > 200 && isNaN(numb)) {
+                console.log(`only input from 100 to 200 is required`)
+            }
+            else if (!numb) {
+                console.log(`the space cannot be empty`)
+            }
+
+            for (i = 2; i < numb; i++) {
+
+                if (numb % i === 1) {
+                    console.log(`incorrect, ${numb} is not a prime number`);
+                    break;
+                }
+                if (numb) {
+                    console.log(`correct, ${numb} is not a prime number`);
+                }
+            }
+        </script>
+
     </div>
 
-
-    <script>
-            for(let j=10; j<50; j++){
-            if(j%1===2){
-                continue;
-            }
-            // document.write(`${num}<br>`)
-            console.log(j)
-        }
-    </script>
-    <!-- <script>
-        let num=prompt(`enter any prime number that you know from 100 to 200`);
-        if(num<100|| num>200){
-            alert('invalid input')
-        }else{
- 
-        for( ; num<=200; num++){
-            if(num %2===1){
-                alert(`You are right ${num} is a prime number`);
-                break;
-            }
-            else if(num %2===0){
-                alert(`You are wrong ${num} is not a prime number`)
-                break;
-            }
-        }
-        }
-
-        
-    </script>
- -->
-
- <script>
-    let numb=Number(prompt('enter any prime number from 100 to 200'));
-    let i;
-    if(numb<100 && num>200 && isNaN(numb)){
-        console.log(`only input from 100 to 200 is required`)
-    }
-    else if(!numb){
-        console.log(`the space cannot be empty`)
-    }
-
-    for(i=2; i<numb; i++){
-
-        if(numb%i===1){
-            console.log(`incorrect, ${numb} is not a prime number`);
-            break;
-        }
-        if(numb){
-            console.log(`correct, ${numb} is not a prime number`);
-        }
-    }
- </script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-</script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+
 </html>

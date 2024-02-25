@@ -10,6 +10,24 @@
             border-collapse: collapse;
             font-size: 24px;
         }
+        @media screen and (max-width:768px) {
+            .query {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .dropdown {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
     </style>
 </head>
 <body>
@@ -50,66 +68,61 @@
         <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button" data-bs-toggle="dropdown">
             DAY 5
         </a>
-
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
             <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
         </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
-                DAY 6
-            </a>
+        <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
+             DAY 6
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
+             <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
         </ul>
 
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
-                <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
-            </ul>
-            <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
-                DAY 7
-            </a>
+        <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
+            DAY 7
+        </a>
+        <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
+            <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+        </ul>
 
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="investment.html">Build a Nigeria app</a></li>
-                <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
-            </ul>
+        <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"data-bs-toggle="dropdown">
+            DAY 8
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
+        </ul>
+        <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
+            DAY 9
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+        </ul>
+            
+        <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
+            DAY 10
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
+            <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
+        </ul>
 
-            <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
-                data-bs-toggle="dropdown">
-                DAY 8
-            </a>
+        <a class="btn btn-secondary dropdown-toggle" href="methods.html" role="button" data-bs-toggle="dropdown">
+            DAY 11
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
+        </ul>
 
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
-            </ul>
-
-            <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
-                DAY 9
-            </a>
-
-            <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
-                DAY 10
-            </a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
-                <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
-            </ul>
-
-            <a class="btn btn-secondary dropdown-toggle" href="methods.html" role="button" data-bs-toggle="dropdown">
-                DAY 11
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
-            </ul>
-
-            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
-                DAY 12
-            </a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
-            </ul>
+        <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button" data-bs-toggle="dropdown">
+            DAY 12
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
+        </ul>
     </div>
 
 
@@ -258,21 +271,6 @@
 
     <p style="font-size: 24px;">Backslash(``) The backslash indicates that the next character should be treated as a literal character rather than as a special 
     character or string delimiter.</p>
-
-
-    <nav style="text-align: center;">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="history.html">history of Javascript</a></li>
-            <li class="page-item"><a class="page-link" href="ass.html">Display key words<br></a></li>
-            <li class="page-item"><a class="page-link" href="Var,let&const.html">Differences btwn Var,Let&Const</a></li>
-            <li class="page-item"><a class="page-link" href="Differentiate.html">difference btwn comparison and logical operato </a></li>
-            <li class="page-item"><a class="page-link" href="js.html">Greet app</a></li>
-            <li class="page-item"><a class="page-link" href="while-loop.html">difference btwn while,for and do-while</a></li>
-            <li class="page-item"><a class="page-link" href="investment.html">investment calculator</a></li>
-            <li class="page-item"><a class="page-link" href="loop.html">Loop</a></li>
-        </ul>
-    </nav>
 
     </body>
 <script src=
