@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Uber</title>
+</head>
+
+<body>
+
+    <nav class="uber">
+        <div class="logo">
+            <img src="img/uber.png">
+        </div>
+    </nav>
+
+
+    <div class="mainpage">
+        <div class="background">
+            <div class="header">
+                <p id="ride">BOOK A RIDE</p>
+            </div>
+
+            <div class="inputs">
+                <div class="inputs" id="input1">
+                    <label for="">From*</label>
+                    <input type="text" id="from" oninput="fromvalidate()">
+                    <span id="fromerror"></span>
+                </div><br>
+
+                <div class="input" id="input2">
+                    <label for="">To*</label>
+                    <input type="text" id="to" oninput="tovalidate()">
+                    <span id="toerror"></span>
+                </div><br>
+            </div>
+
+            <div class="text">
+                <h4 id="confirmtext" style="color: green;text-align: center;">Enter your preferred destination</h4>
+            </div>
+
+            <!-- <div class="buttons"></div> -->
+
+            <div class="stopinn">
+                <h1 id="time-schedule">
+                    <span id="min">00</span>
+                    <span id="time:" class="blink">:</span>
+                    <span id="sec">00</span>
+                </h1>
+            </div>
+            <div class="text">
+                <h4 id="text" style="color: green;text-align: center;"></h4>
+
+            </div>
+
+
+            <div class="recipt">
+                <div class="spin" id="spine"></div>
+                <table id="Amount">
+                    <tr class="table-rows ">
+                        <td>Base fare</td>
+                        <td id="base" class="payable"></td>
+                    </tr>
+                    <tr class="rows">
+                        <td>Time fare</td>
+                        <td id="time" class="payable"></td>
+                    </tr>
+                    <tr class="table-rows">
+                        <td>Initial Total</td>
+                        <td id="initot" class="payable"></td>
+                    </tr>
+                    <tr class="rows">
+                        <td>Tax(10%)</td>
+                        <td id="tax" class="payable"></td>
+                    </tr>
+                    <tr class="tab-line rows ">
+                        <td>Payable amount</td>
+                        <td id="pay" class="payable"></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="buttons">
+                <div class="">
+                    <button id="proceedcount" style="color: white;background:rgb(48,183,21);">Next </button>
+                </div>
+
+                <div class="start-sec">
+                    <button id="cancelcount" style="color: white;background:rgb(48,183,21);">No, cancel</button>
+                    <button id="startcount" style="color: white;background:rgb(48,183,21);">Yes, start</button>
+                </div>
+
+                <div class="start-sec">
+                    <div class="ago">
+                        <div class="cago">
+                            <button id="pausecount" style="color: white;background:rgb(48,183,21)">Pause Ride</button>
+                            <button id="contcount" style="color: white;background: rgb(48,183,21)">Continue Ride</button>
+                        </div>
+                        <button id="stopcount" style="color: white;background:rgb(48,183,21)">Stop Ride</button>
+                    </div>
+                </div>
+                <button id="generatecount" style="color: white;background: rgb(48,183,21)">Generate receipt</button>
+                <button id="resetcount" style="color: white;background:rgb(48,183,21)">Clear</button>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+let pickup = document.getElementById("from");
+let stoppoint = document.getElementById("to");
+let inputs = document.getElementById("input1");
+let input = document.getElementById("input2");
+let analysis = document.getElementById("text");
+let formerror = document.getElementById("fromerror");
+let toerror = document.getElementById("toerror");
+let minute = document.getElementById("min");
+let seconds = document.getElementById("sec");
+let state = document.getElementById("ride");
+
+let proceed = document.getElementById("proceedcount");
+let start = document.getElementById("btncount");
+let cancel = document.getElementById("btncount");
+let confirminfo = document.getElementById("confirmtext");
+let pause = document.getElementById("btncount");
+let cont = document.getElementById("contcount");
+let stop = document.getElementById("stopcount");
+let generate = document.getElementById("generatecount");
+let reset = document.getElementById("resetcount");
+let time = document.getElementById("time-schedule");
+let spin = document.getElementById("spine");
+let Time = document.getElementById("time:");
+
+
+let receipt = document.getElementById("Amount");
+let prices = document.querySelectorAll(".payable");
+
+
+
+let efg = 0;
+let p, minout, secout, base, timeprice, initotal, taxamount, totalpay, peak1, peak2;
+
+State.innerHTML = "BOOK A RIDE NOW";
+
+function fromvalidate() {
+    if (!pickup.value || !isNaN(pickup.value)) {
+        formerror.innerHTML = "Invalid input";
+        peak1 = false;
+    }
+    else {
+        formerror.innerHTML = "";
+        peak1 = true;
+    }
+}
+
+function tovalidate() {
+    if (!stoppoint.value || !isNaN(stoppoint.value)) {
+        toerror.innerHTML = "Invalid input";
+        peak2 = false;
+    }
+    else {
+        toerror.innerHTML = "";
+        peak2 = true;
+    }
+}
+proceedcount.addEventListener("click", () => { 
+    if (stoppoint.value && pickup.value && peak1 == true && peak2 == true) {
+        startcount.style.visibility = "visible";
+        startcount.style.position = "relative";
+        cancelcount.style.visibility = "visible";
+        // cancelcount.style.position = "relative";
+        input1.style.visibility = "hidden";
+        // input1.style.position = "absolute";
+        input2.style.visibility = "hidden";
+        // input2.style.position = "absolute";
+        proceedcount.style.visibility = "hidden";
+        // proceedBtn.style.position = "absolute";
+        confirminfo.innerHTML = `You are in need of a ride from ${pickup.value} to ${stoppoint.value}, kindly confirm i it is easily accessible`
+    }
+    else {
+        fromvalidate();
+        tovalidate();
+        confirminfo.innerHTML = "Input your destination";
+    }
+})
+
+function countengine() {
+    efg++
+    minout = parseInt(efg / 60);
+    secout = (efg % 60);
+    console.log(minout);
+    console.log(secout);
+    minute.innerHTML = minout;
+    seconds.innerHTML = secout;
+}
+
+function Going() {
+    p = setInterval(countengine, 1000);
+    startcount.style.visibility = "hidden";
+    // startBtn.style.position = "absolute";
+    cancelcount.style.visibility = "hidden";
+    // cancelBtn.style.position = "absolute";
+    pausecount.style.visibility = "visible";
+    // pauseBtn.style.position = "relative";
+    stopcount.style.visibility = "visible";
+    // stopBtn.style.position = "relative";
+    time.style.visibility = "visible";
+    // showtime.style.position = "relative";
+    confirminfo.innerHTML = "";
+    State.innerHTML = "RIDE IN PROGRESS";
+    time:.classList.add("blink");
+    tripinfo.innerHTML = `You are now in from ${pickup.value} to ${stoppoint.value} `
+}
+startcount.addEventListener("click", Going);
+
+cancelcount.addEventListener("click", () => {
+    startcount.style.visibility = "hidden";
+    // startBtn.style.position = "absolute";
+    cancelcount.style.visibility = "hidden";
+    // cancelBtn.style.position = "absolute";
+    input1.style.visibility = "visible";
+    // inp1.style.position = "relative";
+    input2.style.visibility = "visible";
+    // inp2.style.position = "relative";
+
+    proceedBtn.style.visibility = "visible";
+    proceedBtn.style.position = "relative";
+    futuredesti.value = "";
+    presentdesti.value = "";
+    confirminfo.innerHTML = "Input your destinations";
+})
+
+btncount.addEventListener("click", () => {
+    clearInterval(p);
+    contcount.style.visibility = "visible";
+    // contBtn.style.position = "relative";
+    pausecount.style.visibility = "hidden";
+    // pauseBtn.style.position = "absolute";
+    time:.classList.remove("blink");
+    State.innerHTML = "RIDE Paused";
+    tripinfo.innerHTML = `You have paused your  ride from ${pickup.value} to ${stoppoint.value}`
+})
+
+contcount.addEventListener("click", () => {
+    p = setInterval(countengine, 1000);
+    contcount.style.visibility = "hidden";
+    // contcount.style.position = "absolute";
+    pausecount.style.visibility = "visible";
+    // pauseBtn.style.position = "relative";
+    time:.classList.add("blink");
+    State.innerHTML = "RIDE IN PROGRESS";
+    tripinfo.innerHTML = `You are now moving from ${pickup.value} to ${stoppoint.value} `;
+})
+
+stopcount.addEventListener("click", () => {
+    clearInterval(p);
+    generatecount.style.visibility = "visible";
+    // genertBtn.style.position = "relative";
+    pausecount.style.visibility = "hidden";
+    // pauseBtn.style.position = "absolute";
+    stopcount.style.visibility = "hidden";
+    // stopBtn.style.position = "absolute";
+    contcount.style.visibility = "hidden";
+    // contBtn.style.position = "absolute";
+    time:.classList.remove("blink");
+    tripinfo.innerHTML = `Your trip has come to an end`
+    State.innerHTML = "RIDE HAS ENDED";
+})
+
+
+function spinner() {
+    spine.style.visibility = "visible";
+    // spinner.style.position = "relative";
+}
+
+function loosespinner() {
+    spine.style.visibility = "hidden";
+    // spinner.style.position = "absolute";
+}
+
+function calcualator() {
+    base = 1000;
+    minout = +(minout)
+    secout = +(secout)
+    timeprice = Math.round((minout + (secout / 60)) * 100);
+    initotal = base + timeprice;
+    taxamount = Math.round(initotal * 0.10);
+    totalpay = initotal + taxamount;
+
+    receiptprices.forEach(receiptprices => {
+        if (receiptprices.id == "base") receiptprices.innerHTML = `&#8358;${base}`;
+        else if (receiptprices.id == "time") receiptprices.innerHTML = `&#8358;${timeprice}`;
+        else if (receiptprices.id == "initot") receiptprices.innerHTML = `&#8358;${initotal}`;
+        else if (receiptprices.id == "tax") receiptprices.innerHTML = `&#8358;${taxamount}`;
+        else if (receiptprices.id == "payable") receiptprices.innerHTML = `&#8358;${totalpay}`;
+    })
+}
+
+function loading(loading, stop) {
+    let count = loading;
+
+    function loaderinin() {
+        console.log(count);
+        if (count === stop) {
+            clearInterval(goload);
+            showreceipt.style.visibility = "visible";
+            showreceipt.style.position = "relative";
+            genertBtn.style.visibility = "hidden";
+            genertBtn.style.position = "absolute";
+            resetBtn.style.visibility = "visible";
+            resetBtn.style.position = "relative";
+
+            loosespinner();
+            calcualator();
+        }
+
+        else {
+            count++
+            spinner();
+        }
+    }
+    let goload = setInterval(loaderinin, 1000);
+}
+
+
+generatecount.addEventListener("click", () => {
+
+    loadershow(0, 5)
+})
+
+resetcount.addEventListener("click", () => {
+    efg = 0;
+    minute.innerHTML = "00";
+    seconds.innerHTML = "00";
+    startcount.style.visibility = "hidden";
+    // startBtn.style.position = "absolute";
+    cancelcount.style.visibility = "hidden";
+    // cancelBtn.style.position = "absolute";
+
+    input1.style.visibility = "visible";
+    // inp1.style.position = "relative";
+    input2.style.visibility = "visible";
+    // inp2.style.position = "relative";
+
+    proceedcount.style.visibility = "visible";
+    // proceedBtn.style.position = "relative";
+    pickup.value = "";
+    stoppoint.value = "";
+    confirminfo.innerHTML = "Input your destinations";
+    resetcount.style.visibility = "hidden";
+    // resetBtn.style.position = "absolute";
+    receipt.style.visibility = "hidden";
+    // showreceipt.style.position = "absolute";
+    time.style.visibility = "hidden";
+    // showtime.style.position = "absolute";
+    tripinfo.innerHTML = "";
+    State.innerHTML = "BOOK A RIDE NOW";
+})
+</script>
+    <script src="../myjs/uber.js"></script>
+
+    BOOSTRAP JAVASCRIPT FILE
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

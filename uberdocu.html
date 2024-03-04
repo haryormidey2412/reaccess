@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="query">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
+                DAY 1
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">HTML Page</a></li>
+                <li><a class="dropdown-item" href="index.html">History of JavaScript</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="displayjs.html" role="button" data-bs-toggle="dropdown">
+                DAY 2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="displayjs.html">Explain ways to display js</a></li>
+                <li><a class="dropdown-item" href="displayjs.html">Reserved Js keyword</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="Var,let&const.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 3
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Var,let&const.html">Differences between let,var&const</a></li>
+                <li><a class="dropdown-item" href="Var,let&const.html">Similarities btwn let,var&const</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="day4.html" role="button" data-bs-toggle="dropdown">
+                DAY 4
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="day4.html">Ways to identify string in js</a></li>
+                <li><a class="dropdown-item" href="day4.html">Array chain</a></li>
+            </ul>
+
+
+            <a class="btn btn-secondary dropdown-toggle" href="Differentiate.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 5
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Differentiate.html">Differentiate btwn the different strings</a></li>
+                <li><a class="dropdown-item" href="Differentiate.html">Similarities btwn the different strings</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="js.html" role="button" data-bs-toggle="dropdown">
+                DAY 6
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="js.html">Greet your app</a></li>
+                <li><a class="dropdown-item" href="js.html">Build a guess Nigeria age</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="investment.html" role="button" data-bs-toggle="dropdown">
+                DAY 7
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="investment.html">Build a retirement Nigeria age</a></li>
+                <li><a class="dropdown-item" href="investment.html">ROI calculate</a></li>
+                <li><a class="dropdown-item" href="investment.html">Interest calculate</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="scope,hoisting&closure.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 8
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="scope,hoisting&closure.html">Scope,Hoisting&Closure</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="guessage.html" role="button" data-bs-toggle="dropdown">
+                DAY 9
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guessage.html">Guess game</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="loop.html" role="button" data-bs-toggle="dropdown">
+                DAY 10
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="loop.html">List all prime numbers from 10-50</a></li>
+                <li><a class="dropdown-item" href="loop.html">List prime number from 100-200</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="methods.html" role="button" data-bs-toggle="dropdown">
+                DAY 11
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="methods.html">methods in js with examples</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="formvalidation.html" role="button"
+                data-bs-toggle="dropdown">
+                DAY 12
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="formvalidation.html">Form validation</a></li>
+            </ul>
+
+            <a class="btn btn-secondary dropdown-toggle" href="uberdocu.html" role="button" data-bs-toggle="dropdown">
+                DAY 13
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="uberdocu.html">Uber App</a></li>
+            </ul>
+        </div><br><br>
+
+
+        <div class="free" style="text-align: center;">
+            <div class="logo">
+                <img src="img/uber.png">
+            </div><br>
+
+            <div class="header">
+                <p id="ride">BOOK A RIDE</p>
+            </div>
+
+            <div class="text">
+                <h4 id="confirmtext" style="color: green;text-align: center;">Enter your preferred destination</h4>
+            </div>
+
+            <div class="inputs">
+                <div class="inputs" id="input1">
+                    <label for="">From*</label>
+                    <input type="text" id="from" oninput="fromvalidate()">
+                    <span id="fromerror"></span>
+                </div><br>
+
+                <div class="input" id="input2">
+                    <label for="">To*</label>
+                    <input type="text" id="to" oninput="tovalidate()">
+                    <span id="toerror"></span>
+                </div><br>
+            </div>
+
+
+            <span id="mm">00</span>
+            <span id=":">:</span>
+            <span id="ss">00</span>
+            <br><br>
+
+            <h4 id="text" style="color: green;text-align: center;"></h4>
+
+
+            <button id="start">Start Ride</button>
+            <button id="pause" style="display: none;">Pause Ride</button>
+            <button id="stop" style="display: none;">Stop Ride</button>
+            <button id="cont" style="display: none;">Cont Ride</button>
+            <button id="reset" style="display: none;">Reset</button>
+            <button id="proceed" style="display: none;">Next </button>
+            <br><br>
+            <button id="generatecount">Generate receipt</button>
+            <button id="resetcount">Clear</button>
+
+
+            <div class="receipt">
+                <table id="Amount">
+                    <tr class="table-rows">
+                        <td>Base fare</td>
+                        <td id="base" class="payable"></td>
+                    </tr>
+                    <tr class="rows">
+                        <td>Time fare</td>
+                        <td id="time" class="payable"></td>
+                    </tr>
+                    <tr class="table-rows">
+                        <td>Initial Total</td>
+                        <td id="initot" class="payable"></td>
+                    </tr>
+                    <tr class="rows">
+                        <td>Tax(10%)</td>
+                        <td id="tax" class="payable"></td>
+                    </tr>
+                    <tr class="tab-line rows ">
+                        <td>Payable amount</td>
+                        <td id="pay" class="payable"></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <script>
+                let ago = document.getElementById('mm');
+                let cago = document.getElementById('ss');
+                let startbtn = document.getElementById('start');
+                let pausebtn = document.getElementById('pause');
+                let stopbtn = document.getElementById('stop');
+                let contbtn = document.getElementById('cont');
+                let resetbtn = document.getElementById('reset');
+                let proceed = document.getElementById("proceed");
+                let confirm = document.getElementById("confirmtext");
+                let from = document.getElementById('from');
+                let to = document.getElementById('to');
+                let formerror = document.getElementById("fromerror");
+                let analysis = document.getElementById("text");
+
+                let receipt = document.getElementById("Amount");
+                let prices = document.querySelectorAll(".payable");
+
+                let efg = 0;
+                let k;
+                let peak;
+                let stopengine;
+
+                function myengine() {
+                    ++efg;
+                    let mm = parseInt(1 / 60);
+                    let ss = parseInt(efg % 60);
+
+                    if (ss == mm) {
+                        stopengine();
+                        reset.innerHTML = 'start up';
+                    }
+                    else {
+                        mm = (mm < 10) ? '0' + mm : mm;
+                        ss = (ss < 10) ? `0` + ss : ss;
+
+
+                        ago.innerHTML = mm;
+                        cago.innerHTML = ss;
+                    }
+
+                };
+
+                function fromvalidate() {
+                    if (!from.value || !isNaN(from.value)) {
+                        formerror.innerHTML = "Invalid input";
+                        peak1 = false;
+                    }
+                    else {
+                        formerror.innerHTML = "";
+                        peak1 = true;
+                    }
+                }
+
+                function tovalidate() {
+                    if (!to.value || !isNaN(to.value)) {
+                        toerror.innerHTML = "Invalid input";
+                        peak2 = false;
+                    }
+                    else {
+                        toerror.innerHTML = "";
+                        peak2 = true;
+                    }
+                }
+                proceed.addEventListener("click", () => {
+                    if (to.value && pickup.value && peak1 == true && peak2 == true) {
+                        start.style.visibility = "visible";
+                        cancel.style.visibility = "visible";
+                        input1.style.visibility = "hidden";
+                        input2.style.visibility = "hidden";
+                        proceed.style.visibility = "hidden";
+                        confirminfo.innerHTML = `You are in need of a ride from ${from.value} to ${to.value}, kindly confirm if it is easily accessible`
+                    }
+                    else {
+                        fromvalidate();
+                        tovalidate();
+                        confirminfo.innerHTML = "Input your destination";
+                    }
+                })
+
+
+
+                function count() {
+                    k = setInterval(myengine, 1000);
+                }
+
+                function startcount() {
+                    count()
+                    startbtn.style.display = 'none';
+                    pausebtn.style.display = 'inline';
+                    stopbtn.style.display = 'inline';
+                    analysis.innerHTML = `You are now in from ${from.value} to ${to.value}`
+                }
+
+                function pausecount() {
+                    clearInterval(k);
+                    pausebtn.style.display = 'none';
+                    contbtn.style.display = 'inline';
+                    analysis.innerHTML = `Ride Paused!!! Your ride has been paused from ${from.value} to ${to.value}`
+                }
+
+                function contcount() {
+                    count()
+                    pausebtn.style.display = 'inline';
+                    contbtn.style.display = 'none';
+                    analysis.innerHTML = ` Ride in progress, you are now moving from ${from.value} to ${to.value}`;
+                }
+
+                function stopcount() {
+                    clearInterval(k);
+                    pausebtn.style.display = 'none';
+                    contbtn.style.display = 'none'
+                    stopbtn.style.display = 'none';
+                    resetbtn.style.display = 'inline';
+                    analysis.innerHTML = `Your trip has come to an end`
+                }
+
+                function resetcount() {
+                    clearInterval(k)
+                    efg = 0;
+                    ago.innerHTML = '0' + 0;
+                    cago.innerHTML = '0' + 0;
+                    resetbtn.style.display = 'none';
+                    startbtn.style.display = 'inline';
+                    startbtn.innerHTML = 'Start Again';
+                }
+
+                startbtn.addEventListener('click', startcount)
+                pausebtn.addEventListener('click', pausecount);
+                stopbtn.addEventListener('click', stopcount);
+                contbtn.addEventListener('click', contcount);
+                resetbtn.addEventListener('click', resetcount);
+
+
+                
+            </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+</script>
+
+</body>
+
+</html>

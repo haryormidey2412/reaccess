@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        BOOK ACCOMODATION
+    </h1>
+    <!-- <button onclick="arm()"> -->
+        <select id="">
+            <option value="">SELECT ACCOMODATION</option>
+            <!-- <button onclick="arm()"> -->
+                <button onclick="arm()"><option value="" id="free">FREE ACCOMODATION</option></button>
+            <!-- </button> -->
+            <option value="" id="book">BOOK FOR HOTEL</option>
+        </select>
+    <!-- </button> -->
+    <!-- <select id="">
+        <option value="">SELECT ACCOMODATION</option>
+        <option value="" id="free">FREE ACCOMODATION</option>
+        <option value="" id="book">BOOK FOR HOTEL</option>
+    </select> -->
+    <h3 style="display: none;" id="free output">
+        ONE OF OUR STAFF WILL GET YOU AN ACCOMODATION SOON
+    </h3>
+    <select id="" style="display: none;">
+        <option value="">SELECT ROOM TYPE</option>
+        <option value="">BASIC -----> 5000</option>
+        <option value="">EMARALD ------> 15,000</option>
+        <option value="">SUPREME -----> 30,000</option>
+    </select>
+
+    <input type="text" id="" placeholder="HOW MANY DAYS ?" style="display: none;">
+    <script>
+        // let free = document.getElementById("free");
+        // let book = document.getElementById("book");
+        // let freeoutput = document.getElementById("free output");
+
+        function arm(){
+        document.querySelector('#free').style.color="white";
+        document.querySelector('#free').innerHTML="One of our staff will give you an accomodation";
+        document.querySelector('#free').style.background="green";
+}
+
+    </script>
+</body>
+
+</html>

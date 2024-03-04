@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+
+    <div class="elem-group">
+        <label for="">HOTEL BOOKING</label><br><br>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Choose a Room from the List</option>
+            <option value="free">Free Accomodation</option>
+            <option value="room">Book a room</option>
+        </select><br><br>
+    </div>
+
+    <h3 style="display: none;" id="output">
+        ONE OF OUR STAFF(s) WILL GET YOU AN ACCOMODATION SOON
+    </h3>
+
+    <select id="reservation" style="display: none;">
+        <option value="1">SELECT ROOM TYPE</option>
+        <option value="2">BASIC -----> 5000</option>
+        <option value="3">EMERALD ------> 15,000</option>
+        <option value="4">SUPREME -----> 30,000</option>
+    </select>
+
+
+
+    <script>
+        let rooms= document.getElementById("room-selection");
+        let output= document.getElementById("output");
+        let reservation=document.getElementById("reservation");
+        
+        function mariam() {
+            output.style.color = "black";
+            output.innerHTML = "One of our staff(s) will assign you to a free accomodation.<br>Enjoy your Stay";
+            output.style.display="inline";
+        }
+
+        // function peak(){
+        //     output.style.color = "black";
+        //     output.innerHTML = "BASIC ----->5000","EMARALD ------> 15,000","SUPREME -----> 30,000";
+        //     output.style.display="inline";
+        // }
+
+        rooms.addEventListener("change", mariam)
+        // roomx  xxxxxxs.addEventListener("change", peak)
+    </script>
+
+</body>
+
+</html>
