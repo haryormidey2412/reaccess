@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel BOOKING</title>
+</head>
+
+<body>
+
+    <div class="input">
+        <label for="">Room Type</label><br><br>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Choose a Room from the List</option>
+            <option value="free">Free Accomodation</option>
+            <option value="room">Book a room</option>
+        </select><br><br>
+    </div>
+    <div>
+        <h3 style="display: none;" id="output">
+            ONE OF OUR STAFF(s) WILL GET YOU AN ACCOMODATION SOON
+        </h3>
+    </div>
+    <div>
+        <p id="book" style="display: none;">Book a room</p>
+    </div>
+    <!-- <div>
+        <select id="reservation" style="display: none;">
+            <option value="1">SELECT ROOM TYPE</option>
+            <option value="2">BASIC --- 5000</option>
+            <option value="3">EMERALD ---- 15,000</option>
+            <option value="4">SUPREME --- 30,000</option>
+        </select>
+    </div> -->
+    <div class="inps lag" id="price-room-div">
+        <label for="">Select type*</label>
+
+        <select name="" id="price-room" onchange="loaddate()" style="display: none;">
+            <option value="0">CHOOSE</option>
+            <option value="10000">Basic (#5000/night)</option>
+            <option value="20000">Emerald (₦15,000/Night)</option>
+            <option value="35000">Supreme (₦35,000/Night)</option>
+
+        </select>
+    </div>
+
+    <div>
+    
+        <button id="hotelnext" style="margin-top: 30px;">next </button>
+        <button id="hotelbook">I understand, continue &amp; book</button>
+    </div>
+
+
+    <div class="inputs">
+
+    </div>
+
+    <script>
+        let rooms = document.getElementById("room-selection");
+        let output = document.getElementById("output");
+        let reservation = document.getElementById("reservation");
+        let book = document.getElementById("book");
+        let roomprice = document.getElementById("price-room-div");
+        let duluxprices = document.getElementById("price-room");
+
+        let hotelnext = document.getElementById("hotelnext");
+        let hotelbook = document.getElementById("hotelbook");
+
+        function mariam() {
+            output.style.color = "black";
+            output.innerHTML = "One of our staff(s) will assign you to a free accomodation.<br>Enjoy your Stay";
+            output.style.display = "inline";
+        }
+        rooms.addEventListener("change", mariam)
+
+        function peak() {
+
+        }
+
+        function loaddate() {
+        depart.style.border = "";
+        depart.value = "";
+        rooms.style.border = "";
+
+        if (duluxprices.value != "0") {
+        datediv.style.visibility = "visible";
+        datediv.style.position = "relative";
+
+
+        hotelnext.style.visibility = "visible";
+        hotelnext.style.position = "relative";
+        hotelbook.style.visibility = "hidden";
+        hotelbook.style.position = "absolute";
+        pricediv.style.visibility = "hidden";
+        pricediv.style.position = "absolute";
+
+
+
+    }
+
+
+    else {
+        datediv.style.visibility = "visible";
+        datediv.style.position = "relative";
+
+        hotelnext.style.visibility = "visible";
+        hotelnext.style.position = "relative";
+        hotelbook.style.visibility = "hidden";
+        hotelbook.style.position = "absolute";
+        pricediv.style.visibility = "hidden";
+        pricediv.style.position = "absolute";
+
+    }
+}
+duluxprices.addEventListener("change", loaddate)
+
+    </script>
+</body>
+
+</html>
