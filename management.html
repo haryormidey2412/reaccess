@@ -134,12 +134,22 @@
         
         <a class="btn btn-secondary dropdown-toggle" href="uberdocu.html" role="button"
             data-bs-toggle="dropdown">
-            DAY 14
+            DAY 13
          </a>
 
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="uberdocu.html">Uber App</a></li>
          </ul>
+
+         <a class="btn btn-secondary dropdown-toggle" href="management.html" role="button"
+            data-bs-toggle="dropdown">
+            DAY 14
+         </a>
+
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="management.html">Uber App</a></li>
+         </ul>
+
 
         
     </div>
@@ -150,19 +160,40 @@
         <li>Milk</li>
         <li>Beverage</li>
     </ol>
-    <input type="text" class="myinputs"><br><br>
+    <input type="text" id="tola" class="myinputs"><br><br>
+    <!-- <button id="addsub">+add</button> -->
     <button onclick="mariam()" value="">Add Item</button>
+    
     <script>
+
     function mariam(){
         let a = document.createElement('li');
+
+        let aa = document.getElementById('myinputs').value
         
-        let b = document.createTextNode('rice');
+        let b = document.createTextNode('aa');
+
+        a.appendChild(b);
 
         let c = document.querySelector('ol');
 
         c.insertBefore(a, c.childNodes[1]);
     }
 
+
+
+
+
+
+    // let mary=(e)=>{
+    //     console.log( `you press ${e.key}`)
+    //     if(e=='Enter'){
+
+    //     }
+
+    // }
+
+    // document.addEventListener('keydown', mary)
     </script>
 </body>
 

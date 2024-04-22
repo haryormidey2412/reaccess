@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="query"><br><br>
+        <div>
+            <h2 class="title" style="text-align: center; color: aqua; background: green;">TASK APP</h2>
+        </div><br><br>
+
+        <div class="main-div">
+            <div class="container-list">
+                <div class="main-content">
+                    <div
+                        style="display: flex;height: 50px;width: 100%; align-items: center;justify-content: center;border: 2px solid green; border-radius: 20px;">
+                        <div style="display: flex;flex-direction: column;width: 50%;height:100%;">
+
+                            <input type="text" id="items"
+                                style="font-size: 20px; width: 100%;height:100%;border:none;padding: 10px 0px 10px 20px;border-radius: 20px 0px 0px 20px;"
+                                placeholder="Enter task to be carried out"/>
+                        </div>
+
+                        <div
+                            style="display: flex; flex-direction: row; width:50%; height:100%; border-radius: 0px 20px 20px 0px;">
+
+                            <input type="number" id="time-start"
+                                style="font-size: 20px; width: 50%;height:100%;padding: 10px 0px 10px 20px;border-radius: 0px 0px 0px 0px;border: none;border-left:1px solid orange;"
+                                placeholder="Start time" min="1" max="26"/>
+
+                            <input type="number" id="time-end"
+                                style="font-size: 20px; width: 50%;height:100%;padding: 10px 0px 10px 20px;border-radius: 0px 20px 20px 0px;border: none;border-left:1px solid orange;"
+                                placeholder="End time" min="1" max="26" />
+                        </div>
+                    </div>
+    
+                    <div class="task-div">
+                        <div class="error">
+                            <div style="color: yellow; display: none; " id="error">
+                                <p>Time can't be greater than 24hr</p>
+                            </div>
+                            <div style="color: yellow; display: none; " id="error2">
+                                <p>Time format used is 24hrs---start-time can't be greater than end-time</p>
+                            </div>
+                           
+                        </div>
+                        <ol id="mytextshow" style=" color: black; font-size: 20px;"></ol>
+                    </div>
+    
+                    <div style="width: 100%;height: 50px;display: flex;font-size:20px;align-items:center;">
+                        <p class="time-ing"
+                            style="text-align:center; height: 100%; width: 70%; border: none; margin:0; background:rgb(217, 180, 82); display:flex; 
+                            align-items: center; justify-content: center; border-radius: 0px 0px 0px 20px;">
+                            Pending task : <span id="task-count">0</span>
+                        </p>
+
+                        <button
+                            style="font-family: 'Times New Roman'; color: goldenrod; height: 100%; width: 30%; 
+                            border: none; background: grey; border-radius: 0px 0px 20px 0px;"
+                            type="button" id="addItem"><i class="bi bi-file-earmark-plus-fill"></i> Add</button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let Task = document.getElementById("items");
+        let Timestart = document.getElementById("time-start");
+        let TimeEnd = document.getElementById("time-end");
+        let myOl = document.getElementById("mytextshow");
+        let itemAdder = document.getElementById("addItem");
+        let TaskCounter = document.getElementById("task-count");
+        let errormess = document.getElementById("error");
+        let errormess2 = document.getElementById("error2");
+
+        let openbtn = document.querySelector("#open");
+        let closebtn = document.getElementById("close");
+        let sidebar = document.querySelector(".side-bar");
+        let sidebarcont = document.querySelectorAll(".side-bar .max .link");
+        let countdownTimers = [];
+        
+        let timedistance, timecount, start_val, end_val;
+        let proceed;
+
+
+    function updateTaskCount() {
+        let completedtask = document.getElementsByClassName("completed");
+        let completedcount = completedtask.length;
+
+        let task_number = document.getElementsByClassName("flex");
+        let pending_task_number = task_number.length;
+        TaskCounter.textContent = pending_task_number - completedcount;
+        }
+        setInterval(updateTaskCount, 500); 
+
+        function open_side_bar() {
+            closebtn.style.display = "inline-block";
+            sidebar.style.width = "320px";
+            sidebar.style.overflow = "hidden auto";
+            sidebar.classList.add("side-bar-features");
+            sidebarcont.forEach(a => {
+            a.style.visibility = "visible";
+            a.style.position = "relative";
+            })
+            }
+
+        function close_side_bar() {
+            closebtn.style.display = "none";
+            sidebar.style.width = "0px";
+            sidebar.style.overflowY = "hidden";
+            sidebar.classList.remove("side-bar-features");
+            sidebarcont.forEach(a => {
+                a.style.visibility = "hidden";
+                a.style.position = "absolute";
+            })
+        }
+            function validateTimeInput(timeinput, messageToDisplay) {
+            let startTime = parseInt(timeinput.value);
+            if (isNaN(startTime) || startTime > 24) {
+                timeinput.style.border = "2px solid red";
+                messageToDisplay.style.display = "block";
+                return false;
+            }
+            else {
+                timeinput.style.border = "none";
+                timeinput.style.borderLeft = "1px solid orange";
+                messageToDisplay.style.display = "none";
+                return true;
+            }
+            }
+
+            function timeformat() {
+            let startTime = parseInt(Timestart.value);
+            let endTime = parseInt(TimeEnd.value);
+            if (startTime > endTime) {
+                errormess2.style.display = "flex";
+                return false;
+            }
+            else {
+                errormess2.style.display = "none";
+                return true;
+            }
+            }
+
+            function create() {
+            let newli = document.createElement("li");
+            let mylicontent = document.createTextNode(Task.value);
+            let taskdiv = document.createElement("span");
+            taskdiv.className = "task";
+            let timediv = document.createElement("span");
+            timediv.className = "time-flex";
+
+            let Time_span = document.createElement("span");
+            Time_span.className = "timevalue timp-up";
+            let enddiv = document.createElement("span");
+            enddiv.className = "endvalue";   
+            start_val = Timestart.value + ":00";
+            end_val = TimeEnd.value + ":00";
+            timedistance = TimeEnd.value - Timestart.value;
+
+            let countdownValue = timedistance * 60 * 60;
+
+            function updateCountdown() {
+                let hours = parseInt(countdownValue / 3600).toString().padStart(2, "0");
+                let minutes = parseInt((countdownValue % 3600) / 60).toString().padStart(2, "0");
+                let seconds = parseInt(countdownValue % 60).toString().padStart(2, "0");
+                
+                DropdownP3.textContent = `Time left: ${hours}h : ${minutes}m : ${seconds}s`;
+                Time_span.textContent = `${hours}h : ${minutes}m : ${seconds}s`;
+
+                if (countdownValue <= 0) {
+                    clearInterval(newli.countdownTimer);
+                    DropdownP3.textContent = "Time's up!";
+                    Time_span.textContent = "Time's up!";
+                } else {
+                    countdownValue--;
+                }
+            }
+            newli.countdownTimer = setInterval(updateCountdown, 1000);
+            console.log(countdownTimers);
+            countdownTimers.push(newli.countdownTimer);
+            newli.dataset.index = countdownTimers.length - 1;
+            let DropdownDiv = document.createElement("div");
+            DropdownDiv.className = "dropdown";
+            
+            let DropdownDivbtn = document.createElement("button");
+            DropdownDivbtn.className = "btn btn-secondary dropdown-toggle";
+            DropdownDivbtn.type = "button";
+            DropdownDivbtn.dataset.bsToggle = "dropdown";
+            let DropdownDivbtnlogo = document.createElement("i");
+            DropdownDivbtnlogo.className = "bi bi-hourglass-split";
+            DropdownDivbtn.appendChild(DropdownDivbtnlogo);
+            
+            let DropdownDivUl = document.createElement("ul");
+            DropdownDivUl.className = "dropdown-menu";
+
+            let DropdownDivli1 = document.createElement("li");
+            let DropdownDivli2 = document.createElement("li");
+            let DropdownDivli3 = document.createElement("li");
+            let DropdownDivli4 = document.createElement("li");
+            let DropdownDivli5 = document.createElement("li");
+
+            let DropdownP = document.createElement("a");
+            DropdownP.className = "dropdown-item";
+
+            let DropdownP2 = document.createElement("a");
+            DropdownP2.className = "dropdown-item";
+                
+            let DropdownP3 = document.createElement("a");
+            DropdownP3.className = "dropdown-item  timp-up";
+
+            let DropdownP4 = document.createElement("a");
+            DropdownP4.className = "dropdown-item get-start-time";
+
+            let DropdownP5 = document.createElement("a");
+            DropdownP5.className = "dropdown-item get-start-end";
+
+            let textP1 = document.createTextNode(`Your selected time is ${start_val}--${end_val}`)
+            let textP2 = document.createTextNode(`You have ${timedistance}Hour to complete this task`)
+            let textP3 = document.createTextNode(`${start_val}`);
+            let textP4 = document.createTextNode(`${end_val}`);
+
+            DropdownP.appendChild(textP1);
+            DropdownP2.appendChild(textP2);
+            DropdownP4.appendChild(textP3);
+            DropdownP5.appendChild(textP4);
+
+            
+            DropdownDiv.appendChild(DropdownDivbtn);
+            DropdownDiv.appendChild(DropdownDivUl);
+
+            DropdownDivUl.appendChild(DropdownDivli1);
+            DropdownDivUl.appendChild(DropdownDivli2);
+            DropdownDivUl.appendChild(DropdownDivli3);
+            DropdownDivUl.appendChild(DropdownDivli4);
+            DropdownDivUl.appendChild(DropdownDivli5);
+
+            DropdownDivli1.appendChild(DropdownP);
+            DropdownDivli2.appendChild(DropdownP2);
+            DropdownDivli3.appendChild(DropdownP3);
+            DropdownDivli3.className = "time-count"
+
+            DropdownDivli4.appendChild(DropdownP4);
+            DropdownDivli4.className = "noshow";
+            DropdownDivli5.appendChild(DropdownP5);
+            DropdownDivli5.className = "noshow";
+
+            taskdiv.appendChild(mylicontent);
+            timediv.appendChild(Time_span);
+            timediv.appendChild(DropdownDiv);
+            
+            newli.appendChild(taskdiv);
+            newli.appendChild(timediv);
+            newli.className = "flex";
+
+            myOl.insertBefore(newli, null);
+            document.getElementById("items").value = "";
+            document.getElementById("time-start").value = "";
+            document.getElementById("time-end").value = "";
+
+            let actionBtnDiv = document.createElement("span");
+            actionBtnDiv.className = "allbtns";
+
+            let checklogo = document.createElement("i");
+            checklogo.className = "fa-solid fa-circle-check";
+            checklogo.title = "Check task done!";
+            let dellogo = document.createElement("i");
+            dellogo.className = "fa-solid fa-trash";
+            dellogo.title = "Delete task";
+            let editlogo = document.createElement("i");
+            editlogo.className = "fa-solid fa-pen-to-square";
+            editlogo.title = "Edit task";
+
+            actionBtnDiv.appendChild(delelogo);
+            actionBtnDiv.appendChild(editlogo);
+            newli.appendChild(actionBtnDiv);
+            Action_btns();
+            }
+
+            function Action_btns() {
+                let btnCont = document.getElementsByClassName("allbtns");
+                let deletebtn = document.getElementsByClassName("fa-trash");
+                let checkedbtn = document.getElementsByClassName("fa-circle-check");
+                let editbtn = document.getElementsByClassName("fa-pen-to-square");
+
+                for (let i = 0; i < btnCont.length; i++) {
+
+                    deletebtn[i].addEventListener("click", (e) => {
+                        let theclosestFlex = e.target.closest(".flex");
+                        deletetask(theclosestFlex);
+                    })
+
+
+                    checkedbtn[i].addEventListener("click", (e) => {
+                        let theclosestFlex = e.target.closest(".flex");
+                        Check_Task_Done(theclosestFlex);
+                    })
+
+
+                    editbtn[i].addEventListener("click", (e) => {
+                        let theclosestFlex = e.target.closest(".flex");
+                        Edit_Task(theclosestFlex);
+                    })
+
+                }
+            }
+
+            function deletetask(theclosestFlex) {
+                let taskCountdownTimer = countdownTimers[theclosestFlex.dataset.index];
+                clearInterval(taskCountdownTimer);
+                theclosestFlex.remove();
+            }
+
+            function Check_Task_Done(theclosestFlex) {
+                let thetask = theclosestFlex.querySelector(".flex .task");
+                let done = theclosestFlex.getElementsByClassName("timp-up");
+                let taskCountdownTimer = countdownTimers[theclosestFlex.dataset.index];
+                clearInterval(taskCountdownTimer);
+
+                done[0].textContent = "Completed";
+                done[1].textContent = "Task completed";
+                thetask.style.textDecoration = "line-through";
+                thetask.style.color = "green";
+                theclosestFlex.classList.add("completed");
+
+                setTimeout(() => {
+                    theclosestFlex.remove();
+                }, 30000)
+            }
+
+            function Edit_Task(theclosestFlex) {
+                let taskCountdownTimer = countdownTimers[theclosestFlex.dataset.index];
+                if (Task.value && Timestart.value && TimeEnd.value) {
+                    Task.focus();
+                }
+                else {
+                    let task_content = theclosestFlex.querySelector(".flex .task").textContent;
+                    let start_content = +(theclosestFlex.querySelector(".get-start-time").textContent.replace(":00", ""));
+                    let end_content = +(theclosestFlex.querySelector(".get-start-end").textContent.replace(":00", ""));
+
+                    document.getElementById("items").value = task_content;
+                    document.getElementById("time-start").value = start_content;
+                    document.getElementById("time-end").value = end_content;
+                    clearInterval(taskCountdownTimer);
+                    theclosestFlex.remove();
+                }
+            }
+
+            function approvedformat() {
+                let TimeStartValid = validateTimeInput(Timestart, errormess);
+                let TimeEndValid = validateTimeInput(TimeEnd, errormess);
+                let timeformatvalid = timeformat()
+
+                if (Task.value && Timestart.value && TimeEnd.value && TimeStartValid && TimeEndValid && timeformatvalid) {
+                    create();
+                }
+                else {
+                    if (!Task.value) {
+                        Task.focus();
+                    }
+                    else if (!Timestart.value) {
+                        Timestart.focus();
+                    }
+                    else if (!TimeEnd.value) {
+                        TimeEnd.focus();
+                    }
+
+                }
+            }
+
+            itemAdder.addEventListener("click", () => {
+                approvedformat();
+            })
+
+
+
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key == "Enter") {
+                    approvedformat();
+                }
+            })
+
+            openbtn.addEventListener("click", open_side_bar);
+
+            closebtn.addEventListener("click", close_side_bar);
+    </script>
+</body>
+</html>
